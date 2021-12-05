@@ -1,0 +1,13 @@
+Package: ggredist
+Title: Scales, Palettes, and Extensions of 'ggplot2' for Redistricting 
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Cory", "McCartan", email = "cmccartan@g.harvard.edu", role = "aut"),
+    person("Christopher T.", "Kenny", email = "christopherkenny@fas.harvard.edu", role = c("aut", "cre")))
+Description: What the package does (one paragraph).
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    ggplot2
