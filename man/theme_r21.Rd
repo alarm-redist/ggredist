@@ -15,3 +15,8 @@ ggplot2 theme
 \description{
 Plot Theme from Redistricting 2021 Blog
 }
+\examples{
+# TODO
+
+}
+\concept{theme}

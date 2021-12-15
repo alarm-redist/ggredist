@@ -51,5 +51,5 @@ Party scales for \code{ggplot2}
 }
 \examples{
 # TODO
-
 }
+\concept{scales}

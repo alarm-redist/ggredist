@@ -9,10 +9,14 @@
 #' @concept theme
 #'
 #' @examples
+#' # TODO
+#'
 theme_map <- function(...) {
   ggplot2::theme_void(base_family = 'Times', base_size = 12) +
-    ggplot2::theme(panel.background = ggplot2::element_rect(fill = "transparent",
-                                                   color = NA), ...)
+    ggplot2::theme(panel.background = ggplot2::element_rect(
+      fill = 'transparent',
+      color = NA
+    ), ...)
 }
 
 #' Plot Theme from Redistricting 2021 Blog
@@ -24,6 +28,8 @@ theme_map <- function(...) {
 #' @concept theme
 #'
 #' @examples
+#' # TODO
+#'
 theme_r21 <- function(...) {
   ggplot2::theme_bw(base_family = 'Times', base_size = 12, ...)
 }

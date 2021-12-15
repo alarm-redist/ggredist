@@ -15,3 +15,8 @@ ggplot2 theme
 \description{
 Theme for maps which uses the \code{'Times'} family and has a transparent background.
 }
+\examples{
+# TODO
+
+}
+\concept{theme}

@@ -1,1 +1,4 @@
 url: https://alarm-redist.github.io/ggredist
+template:
+  bootstrap: 5
+  bootswatch: yeti

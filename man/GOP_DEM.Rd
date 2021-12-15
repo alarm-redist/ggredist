@@ -15,6 +15,6 @@ Vector of evenly spaced party colors from red to white to blue.
 }
 \examples{
 GOP_DEM
-
 }
+\concept{colors}
 \keyword{datasets}
