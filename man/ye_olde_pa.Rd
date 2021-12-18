@@ -5,7 +5,7 @@
 \alias{ye_olde_pa}
 \title{Ye Olde Pennsylvania}
 \format{
-An object of class \code{character} of length 6.
+character vector of length 6
 }
 \usage{
 ye_olde_pa
@@ -15,7 +15,6 @@ Historic categorical color palette for Pennsylvania redistricting.
 }
 \examples{
 ye_olde_pa
-
 }
 \concept{colors}
 \keyword{datasets}

@@ -18,9 +18,24 @@ GOP_DEM <- c(
 #'
 #' Historic categorical color palette for Pennsylvania redistricting.
 #'
-#' @concept colors
+#' @format character vector of length 6
 #'
+#' @concept colors
 #' @examples
 #' ye_olde_pa
-#'
+#' @export
 ye_olde_pa <- c('#FDFD63', '#FAD89B', '#B69940', '#FDFCB1', '#F6B10C', '#F9DE60')
+
+
+#' FiveThirtyEight Colors
+#'
+#' Five Thirty Eight's redistricting color scheme for various levels of political
+#' competitiveness.
+#'
+#' @format character vector of length 5
+#'
+#' @concept colors
+#' @examples
+#' fivethirtyeight
+#' @export
+fivethirtyeight <- c('#5768AC', '#A1A9ED', '#EAE3EB', '#FF998A', '#FA5A50')

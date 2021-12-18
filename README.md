@@ -8,7 +8,7 @@
 [![R-CMD-check](https://github.com/alarm-redist/ggredist/workflows/R-CMD-check/badge.svg)](https://github.com/alarm-redist/ggredist/actions)
 <!-- badges: end -->
 
-The goal of ggredist is to …
+`ggredist` provides `ggplot2` extensions for political map making.
 
 ## Installation
 
