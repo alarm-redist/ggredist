@@ -2,9 +2,12 @@
 % Please edit documentation in R/538.R
 \name{scale_fill_538}
 \alias{scale_fill_538}
+\alias{scale_color_538}
 \title{FiveThirtyEight scales for \code{ggplot2}}
 \usage{
 scale_fill_538(...)
+
+scale_color_538(...)
 }
 \arguments{
 \item{...}{additional arguments to \verb{ggplot::scale_*} functions}
@@ -13,6 +16,7 @@ scale_fill_538(...)
 FiveThirtyEight scales for \code{ggplot2}
 }
 \examples{
-# TODO
+scale_fill_538()
+scale_color_538()
 }
 \concept{scales}

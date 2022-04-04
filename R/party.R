@@ -14,7 +14,12 @@
 #'
 #' @md
 #' @examples
-#' # TODO
+#' scale_fill_party_c()
+#' scale_fill_party_d()
+#' scale_color_party_c()
+#' scale_color_party_c()
+#' scale_color_party_d()
+#' scale_color_party_b()
 scale_fill_party_c <- function(name = 'Democratic share', midpoint = 0.5, limits = 0:1,
                                labels = scales::percent, oob = scales::squish, ...,
                                reverse = FALSE) {
@@ -30,6 +35,15 @@ scale_fill_party_d <- function(...) {
   ggplot2::scale_fill_manual(...,
     values = c(GOP_DEM[2], GOP_DEM[14]),
     labels = c('Rep.', 'Dem.')
+  )
+}
+
+#' @rdname scale_party
+#' @export
+scale_fill_party_b <- function(...) {
+  ggplot2::binned_scale('fill', 'party',
+                        palette = grDevices::colorRampPalette(GOP_DEM),
+                        ...
   )
 }
 

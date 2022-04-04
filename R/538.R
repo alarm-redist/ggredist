@@ -9,7 +9,8 @@
 #'
 #' @md
 #' @examples
-#' # TODO
+#' scale_fill_538()
+#' scale_color_538()
 scale_fill_538 <- function(...) {
   ggplot2::binned_scale('fill', '538',
                         palette = function(x) fivethirtyeight,
