@@ -16,6 +16,9 @@
     <loc>https://alarm-redist.github.io/ggredist/reference/GOP_DEM.html</loc>
   </url>
   <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/dra.html</loc>
+  </url>
+  <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/fivethirtyeight.html</loc>
   </url>
   <url>
@@ -26,6 +29,9 @@
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/scale_538.html</loc>
+  </url>
+  <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/scale_dra.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/scale_party.html</loc>
