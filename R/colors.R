@@ -3,7 +3,7 @@
 #' Included palettes:
 #' - **partisan**, a perceptually uniform red-white-blue scale
 #' - **dra**, the Dave's Redistricting App classic color palette
-#' - *penn82**, Historic categorical color palette from the 1982 published Pennsylvania
+#' - **penn82**, Historic categorical color palette from the 1982 published Pennsylvania
 #' congressional district map
 #'
 #' @format list of character vectors of type `palette` (which supports a
@@ -12,7 +12,7 @@
 #' @examples
 #' plot(ggredist$partisan)
 #' plot(ggredist$dra)
-#' plot(ggredist$ye_olde_pa)
+#' plot(ggredist$penn82)
 #'
 #' @export
 ggredist = list(

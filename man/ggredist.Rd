@@ -16,14 +16,14 @@ Included palettes:
 \itemize{
 \item \strong{partisan}, a perceptually uniform red-white-blue scale
 \item \strong{dra}, the Dave's Redistricting App classic color palette
-\item \emph{penn82}*, Historic categorical color palette from the 1982 published Pennsylvania
+\item \strong{penn82}, Historic categorical color palette from the 1982 published Pennsylvania
 congressional district map
 }
 }
 \examples{
 plot(ggredist$partisan)
 plot(ggredist$dra)
-plot(ggredist$ye_olde_pa)
+plot(ggredist$penn82)
 
 }
 \keyword{datasets}

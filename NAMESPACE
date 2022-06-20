@@ -2,6 +2,7 @@
 
 S3method(plot,palette)
 export(ggredist)
+export(label_margin)
 export(percent_no_dec)
 export(scale_color_538)
 export(scale_color_party_b)
