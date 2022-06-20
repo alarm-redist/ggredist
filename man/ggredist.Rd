@@ -18,12 +18,16 @@ Included palettes:
 \item \strong{dra}, the Dave's Redistricting App classic color palette
 \item \strong{penn82}, Historic categorical color palette from the 1982 published Pennsylvania
 congressional district map
+\item \strong{coast}
+\item \strong{larch}
 }
 }
 \examples{
 plot(ggredist$partisan)
 plot(ggredist$dra)
 plot(ggredist$penn82)
+plot(ggredist$coast)
+plot(ggredist$larch)
 
 }
 \keyword{datasets}

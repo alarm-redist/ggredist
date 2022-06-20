@@ -5,6 +5,8 @@
 #' - **dra**, the Dave's Redistricting App classic color palette
 #' - **penn82**, Historic categorical color palette from the 1982 published Pennsylvania
 #' congressional district map
+#' - **coast**
+#' - **larch**
 #'
 #' @format list of character vectors of type `palette` (which supports a
 #'   `plot()` generic for visualization)
@@ -13,6 +15,8 @@
 #' plot(ggredist$partisan)
 #' plot(ggredist$dra)
 #' plot(ggredist$penn82)
+#' plot(ggredist$coast)
+#' plot(ggredist$larch)
 #'
 #' @export
 ggredist = list(
@@ -25,6 +29,10 @@ ggredist = list(
                     '#B7FF70', '#A8C4F5', '#F3C4B4'), class="palette"),
   penn82 = structure(c('#EDEF3F', '#FED09E', '#A7825A', '#FFF8B7',
                        '#E2A414', '#ECD166'), class="palette"),
+  coast = structure(c("#D4B46E", "#84AFA2", "#547286",
+                      "#7F7C74", "#B2BCD6", "#526042"), class="palette"),
+  larch = structure(c("#D0A75F", "#626B5D", "#8C8F9E",
+                      "#858753", "#A4BADA", "#CDB7AA"), class="palette"),
   fivethirtyeight = structure(c('#5768AC', '#A1A9ED', '#EAE3EB',
                                 '#FF998A', '#FA5A50'), class="palette")
 )
