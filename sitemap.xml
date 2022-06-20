@@ -16,16 +16,13 @@
     <loc>https://alarm-redist.github.io/ggredist/index.html</loc>
   </url>
   <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/GOP_DEM.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/dra.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/fivethirtyeight.html</loc>
+    <loc>https://alarm-redist.github.io/ggredist/reference/ggredist.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/oregon.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/percent_no_dec.html</loc>
@@ -47,8 +44,5 @@
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/theme_r21.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/ye_olde_pa.html</loc>
   </url>
 </urlset>
