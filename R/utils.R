@@ -3,6 +3,16 @@ make_bins <- function(v, pal, where) {
   pal[as.integer(cut(v, where))]
 }
 
+rot_pal <- function(pal) {
+  function(n) {
+    if (n <= length(pal)) {
+      pal[seq_len(n)]
+    } else {
+      rep(pal, ceiling(n / length(pal)))[seq_len(n)]
+    }
+  }
+}
+
 # `plot.palette` modified from that in `wesanderson` (c) 2016 Karthik Ram
 #' @export
 #' @importFrom graphics rect par image text

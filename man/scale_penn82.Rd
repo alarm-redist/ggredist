@@ -2,17 +2,29 @@
 % Please edit documentation in R/pa.R
 \name{scale_fill_penn82}
 \alias{scale_fill_penn82}
-\title{Ye Olde Pennsylvania scales for \code{ggplot2}}
+\alias{scale_color_penn82}
+\alias{scale_colour_penn82}
+\title{Historical Pennsylvania Color Scale for \code{ggplot2}}
 \usage{
 scale_fill_penn82(...)
+
+scale_color_penn82(...)
+
+scale_colour_penn82(...)
 }
 \arguments{
 \item{...}{Arguments passed on to [ggplot2::discrete_scale()}
 }
 \description{
-Ye Olde Pennsylvania scales for \code{ggplot2}
+Historical Pennsylvania Color Scale for \code{ggplot2}
 }
 \examples{
-# TODO
+library(ggplot2)
+data(oregon)
+
+ggplot(oregon, aes(fill = factor(cd_2020))) +
+    geom_sf(size = 0) +
+    scale_fill_penn82() +
+    theme_map()
+
 }
-\concept{scales}

@@ -19,5 +19,5 @@
 #'
 #' @examples
 #' data(oregon)
-#' print(oregon)
+#' oregon[, 1:6] # final column requires `sf` library
 NULL

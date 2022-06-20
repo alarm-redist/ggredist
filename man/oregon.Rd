@@ -24,5 +24,5 @@ This data contains geographic, demographic, and political information on the
 }
 \examples{
 data(oregon)
-print(oregon)
+oregon[, 1:6] # final column requires `sf` library
 }

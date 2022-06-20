@@ -1,24 +1,29 @@
-#' Ye Olde Pennsylvania scales for `ggplot2`
-#'
-#' @rdname scale_penn82
-#' @export
-#' @concept scales
+#' Historical Pennsylvania Color Scale for `ggplot2`
 #'
 #' @param ... Arguments passed on to [ggplot2::discrete_scale()
 #'
-#' @md
 #' @examples
-#' # TODO
+#' library(ggplot2)
+#' data(oregon)
+#'
+#' ggplot(oregon, aes(fill = factor(cd_2020))) +
+#'     geom_sf(size = 0) +
+#'     scale_fill_penn82() +
+#'     theme_map()
+#'
+#' @rdname scale_penn82
+#' @export
 scale_fill_penn82 <- function(...) {
-  ggplot2::discrete_scale(
-    aesthetics = 'fill',
-    scale_name = 'penn82',
-    palette = function(n) {
-      if (n <= 6) {
-        ggredist$penn82[seq_len(n)]
-      } else {
-        grDevices::colorRamp(c('#FCFCF4', '#BFA95E'))
-      }
-    }
-  )
+  ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'penn82',
+                          palette = rot_pal(ggredist$penn82))
 }
+
+#' @rdname scale_penn82
+#' @export
+scale_color_penn82 <- function(...) {
+  ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'penn82',
+                          palette = rot_pal(ggredist$penn82))
+}
+#' @rdname scale_penn82
+#' @export
+scale_colour_penn82 = scale_color_penn82

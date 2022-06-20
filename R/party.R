@@ -1,6 +1,6 @@
-#' Party scales for `ggplot2`
+#' Partisan scales for `ggplot2`
 #'
-#' @param name Name for scale. Default is `"Democratic share"`.
+#' @param name Name for scale. Default is `"Vote share"`.
 #' @param midpoint Scale midpoint value. Default is `0.5`.
 #' @param limits Lower and upper limits for scale. Default is `0:1`.
 #' @param labels Function to adjust scale labels. Default is `scales::percent`.
@@ -30,8 +30,8 @@ NULL
 
 #' @rdname scale_party
 #' @export
-scale_fill_party_c <- function(name = 'Democratic share', midpoint = 0.5, limits = 0:1,
-                               labels = scales::percent, oob = scales::squish,
+scale_fill_party_c <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
+                               labels = label_party_pct(), oob = scales::squish,
                                reverse = FALSE, ...) {
   pal = ggredist$partisan
   if (reverse) pal = rev(pal)
@@ -51,8 +51,8 @@ scale_fill_party_c <- function(name = 'Democratic share', midpoint = 0.5, limits
 
 #' @rdname scale_party
 #' @export
-scale_color_party_c <- function(name = 'Democratic share', midpoint = 0.5, limits = 0:1,
-                                labels = scales::percent, oob = scales::squish,
+scale_color_party_c <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
+                                labels = label_party_pct(), oob = scales::squish,
                                 reverse = FALSE, ...) {
   pal = ggredist$partisan
   if (reverse) pal = rev(pal)
@@ -90,8 +90,8 @@ scale_color_party_d <- function(labels = c('Rep.', 'Dem.'), reverse = FALSE, ...
 
 #' @rdname scale_party
 #' @export
-scale_fill_party_b <- function(name = 'Democratic share', midpoint = 0.5, limits = 0:1,
-                               labels = scales::percent, oob = scales::squish,
+scale_fill_party_b <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
+                               labels = label_party_pct(), oob = scales::squish,
                                reverse = FALSE, nice.breaks = FALSE, ...) {
   pal = ggredist$partisan
   if (reverse) pal$pal = rev(pal)
@@ -112,8 +112,8 @@ scale_fill_party_b <- function(name = 'Democratic share', midpoint = 0.5, limits
 
 #' @rdname scale_party
 #' @export
-scale_color_party_b <- function(name = 'Democratic share', midpoint = 0.5, limits = 0:1,
-                                labels = scales::percent, oob = scales::squish,
+scale_color_party_b <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
+                                labels = label_party_pct(), oob = scales::squish,
                                 reverse = FALSE, nice.breaks = FALSE, ...) {
   pal = ggredist$partisan
   if (reverse) pal$pal = rev(pal)

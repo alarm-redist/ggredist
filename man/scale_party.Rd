@@ -11,23 +11,23 @@
 \alias{scale_colour_party_d}
 \alias{scale_colour_party_c}
 \alias{scale_colour_party_b}
-\title{Party scales for \code{ggplot2}}
+\title{Partisan scales for \code{ggplot2}}
 \usage{
 scale_fill_party_c(
-  name = "Democratic share",
+  name = "Vote share",
   midpoint = 0.5,
   limits = 0:1,
-  labels = scales::percent,
+  labels = label_party_pct(),
   oob = scales::squish,
   reverse = FALSE,
   ...
 )
 
 scale_color_party_c(
-  name = "Democratic share",
+  name = "Vote share",
   midpoint = 0.5,
   limits = 0:1,
-  labels = scales::percent,
+  labels = label_party_pct(),
   oob = scales::squish,
   reverse = FALSE,
   ...
@@ -38,10 +38,10 @@ scale_fill_party_d(labels = c("Rep.", "Dem."), reverse = FALSE, ...)
 scale_color_party_d(labels = c("Rep.", "Dem."), reverse = FALSE, ...)
 
 scale_fill_party_b(
-  name = "Democratic share",
+  name = "Vote share",
   midpoint = 0.5,
   limits = 0:1,
-  labels = scales::percent,
+  labels = label_party_pct(),
   oob = scales::squish,
   reverse = FALSE,
   nice.breaks = FALSE,
@@ -49,10 +49,10 @@ scale_fill_party_b(
 )
 
 scale_color_party_b(
-  name = "Democratic share",
+  name = "Vote share",
   midpoint = 0.5,
   limits = 0:1,
-  labels = scales::percent,
+  labels = label_party_pct(),
   oob = scales::squish,
   reverse = FALSE,
   nice.breaks = FALSE,
@@ -62,20 +62,20 @@ scale_color_party_b(
 scale_colour_party_d(labels = c("Rep.", "Dem."), reverse = FALSE, ...)
 
 scale_colour_party_c(
-  name = "Democratic share",
+  name = "Vote share",
   midpoint = 0.5,
   limits = 0:1,
-  labels = scales::percent,
+  labels = label_party_pct(),
   oob = scales::squish,
   reverse = FALSE,
   ...
 )
 
 scale_colour_party_b(
-  name = "Democratic share",
+  name = "Vote share",
   midpoint = 0.5,
   limits = 0:1,
-  labels = scales::percent,
+  labels = label_party_pct(),
   oob = scales::squish,
   reverse = FALSE,
   nice.breaks = FALSE,
@@ -83,7 +83,7 @@ scale_colour_party_b(
 )
 }
 \arguments{
-\item{name}{Name for scale. Default is \code{"Democratic share"}.}
+\item{name}{Name for scale. Default is \code{"Vote share"}.}
 
 \item{midpoint}{Scale midpoint value. Default is \code{0.5}.}
 
@@ -101,7 +101,7 @@ scale_colour_party_b(
 of exactly evenly spaced between the limits.}
 }
 \description{
-Party scales for \code{ggplot2}
+Partisan scales for \code{ggplot2}
 }
 \examples{
 library(ggplot2)

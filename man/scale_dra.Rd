@@ -2,9 +2,15 @@
 % Please edit documentation in R/dra.R
 \name{scale_fill_dra}
 \alias{scale_fill_dra}
+\alias{scale_color_dra}
+\alias{scale_colour_dra}
 \title{Dave's Redistricting App classic scale for \code{ggplot2}}
 \usage{
 scale_fill_dra(...)
+
+scale_color_dra(...)
+
+scale_colour_dra(...)
 }
 \arguments{
 \item{...}{Arguments passed on to [ggplot2::discrete_scale()}
@@ -13,6 +19,12 @@ scale_fill_dra(...)
 Dave's Redistricting App classic scale for \code{ggplot2}
 }
 \examples{
-scale_fill_dra()
+library(ggplot2)
+data(oregon)
+
+ggplot(oregon, aes(fill = factor(cd_2020))) +
+    geom_sf(size = 0) +
+    scale_fill_dra() +
+    theme_map()
+
 }
-\concept{scales}
