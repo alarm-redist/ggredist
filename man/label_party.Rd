@@ -31,3 +31,4 @@ labeler = label_party_margin(reverse=TRUE)
 labeler(c(0.3, 0.5, 0.543))
 
 }
+\concept{labels}

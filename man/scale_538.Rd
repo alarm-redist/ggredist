@@ -19,4 +19,4 @@ FiveThirtyEight scales for \code{ggplot2}
 scale_fill_538()
 scale_color_538()
 }
-\concept{scales}
+\concept{colors}

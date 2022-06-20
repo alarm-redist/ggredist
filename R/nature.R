@@ -16,6 +16,7 @@
 #'     scale_fill_larch() +
 #'     theme_map()
 #'
+#' @concept colors
 #' @rdname scale_nature
 #' @export
 scale_fill_coast <- function(...) {

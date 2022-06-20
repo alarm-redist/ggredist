@@ -25,7 +25,7 @@
 #'     theme_map()
 #'
 #' @name scale_party
-#' @concept scales
+#' @concept colors
 NULL
 
 #' @rdname scale_party

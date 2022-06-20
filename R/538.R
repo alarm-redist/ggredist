@@ -1,16 +1,15 @@
 #' FiveThirtyEight scales for `ggplot2`
 #'
 #' @rdname scale_538
-#' @export
-#' @concept scales
 #'
 #' @param ... additional arguments to `ggplot::scale_*` functions
-#'
 #'
 #' @md
 #' @examples
 #' scale_fill_538()
 #' scale_color_538()
+#' @concept colors
+#' @export
 scale_fill_538 <- function(...) {
   ggplot2::binned_scale('fill', '538',
                         palette = function(x) ggredist$fivethirtyeight,

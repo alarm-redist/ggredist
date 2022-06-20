@@ -11,6 +11,7 @@
 #'     scale_fill_penn82() +
 #'     theme_map()
 #'
+#' @concept colors
 #' @rdname scale_penn82
 #' @export
 scale_fill_penn82 <- function(...) {

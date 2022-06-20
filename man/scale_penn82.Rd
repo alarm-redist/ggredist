@@ -28,3 +28,4 @@ ggplot(oregon, aes(fill = factor(cd_2020))) +
     theme_map()
 
 }
+\concept{colors}

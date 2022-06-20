@@ -118,4 +118,4 @@ ggplot(oregon, aes(fill = ndv / (ndv + nrv))) +
     theme_map()
 
 }
-\concept{scales}
+\concept{colors}

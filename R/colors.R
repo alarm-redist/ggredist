@@ -21,6 +21,7 @@
 #' plot(ggredist$coast)
 #' plot(ggredist$larch)
 #'
+#' @concept colors
 #' @export
 ggredist = list(
   partisan = structure(c('#A0442C', '#B25D4C', '#C27568', '#D18E84', '#DFA8A0',

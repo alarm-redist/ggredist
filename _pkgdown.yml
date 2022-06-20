@@ -2,4 +2,15 @@ url: https://alarm-redist.github.io/ggredist/
 template:
   bootstrap: 5
   bootswatch: yeti
+reference:
+- title: Color Scales and Palettes
+- contents:
+  - ggredist
+  - has_concept("colors")
+- title: Labeling Functions
+- contents:
+  - has_concept("labels")
+- title: data
+- contents:
+  - oregon
 

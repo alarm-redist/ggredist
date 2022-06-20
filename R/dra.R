@@ -11,6 +11,7 @@
 #'     scale_fill_dra() +
 #'     theme_map()
 #'
+#' @concept colors
 #' @rdname scale_dra
 #' @export
 scale_fill_dra <- function(...) {

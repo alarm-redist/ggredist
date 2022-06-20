@@ -16,6 +16,7 @@
 #'     scale_fill_natgeo() +
 #'     theme_map()
 #'
+#' @concept colors
 #' @rdname scale_polimap
 #' @export
 scale_fill_randmcnally <- function(...) {
