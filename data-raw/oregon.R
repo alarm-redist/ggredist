@@ -16,8 +16,8 @@ oregon = or_map %>%
   `attr<-`("existing_col", NULL) %>%
   `attr<-`("pop_bounds", NULL) %>%
   mutate(across(pop:pop_black, as.integer),
-         tract = str_sub(GEOID, 3)) %>%
-  select(GEOID, county, cd_2020, pop, pop_white, ndv, nrv, geometry) %>%
+         county = str_remove(county, " County")) %>%
+  select(county, cd_2020, pop, pop_white, ndv, nrv, geometry) %>%
   rmapshaper::ms_simplify(keep=0.03, weighting=0.5, keep_shapes=TRUE)
 
 usethis::use_data(oregon, overwrite = TRUE, compress="xz")
