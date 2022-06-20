@@ -16,10 +16,11 @@ Included palettes:
 \itemize{
 \item \strong{partisan}, a perceptually uniform red-white-blue scale
 \item \strong{dra}, the Dave's Redistricting App classic color palette
-\item \strong{penn82}, Historic categorical color palette from the 1982 published Pennsylvania
-congressional district map
-\item \strong{coast}
-\item \strong{larch}
+\item \strong{penn82}, historic categorical color palette from the 1982 published
+Pennsylvania congressional district map
+\item \strong{randmcnally} and \strong{natgeo}, colors taken from Rand-McNally and National
+Geographic political maps
+\item \strong{coast} and \strong{larch}, inspired by natural scenery
 }
 }
 \examples{

@@ -3,10 +3,11 @@
 #' Included palettes:
 #' - **partisan**, a perceptually uniform red-white-blue scale
 #' - **dra**, the Dave's Redistricting App classic color palette
-#' - **penn82**, Historic categorical color palette from the 1982 published Pennsylvania
-#' congressional district map
-#' - **coast**
-#' - **larch**
+#' - **penn82**, historic categorical color palette from the 1982 published
+#' Pennsylvania congressional district map
+#' - **randmcnally** and **natgeo**, colors taken from Rand-McNally and National
+#' Geographic political maps
+#' - **coast** and **larch**, inspired by natural scenery
 #'
 #' @format list of character vectors of type `palette` (which supports a
 #'   `plot()` generic for visualization)
@@ -29,6 +30,10 @@ ggredist = list(
                     '#B7FF70', '#A8C4F5', '#F3C4B4'), class="palette"),
   penn82 = structure(c('#EDEF3F', '#FED09E', '#A7825A', '#FFF8B7',
                        '#E2A414', '#ECD166'), class="palette"),
+  randmcnally = structure(c("#f4c450", "#e79274", "#d3a7ae", "#fcf092",
+                            "#98b791", "#c7d4da", "#e8ba8f"), class="palette"),
+  natgeo = structure(c("#abafd0", "#e8b3a5", "#fded7e", "#b6c572",
+                       "#efc965", "#fcf3e2"), class="palette"),
   coast = structure(c("#D4B46E", "#84AFA2", "#547286",
                       "#7F7C74", "#B2BCD6", "#526042"), class="palette"),
   larch = structure(c("#D0A75F", "#626B5D", "#8C8F9E",
