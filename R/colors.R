@@ -16,6 +16,8 @@
 #' plot(ggredist$partisan)
 #' plot(ggredist$dra)
 #' plot(ggredist$penn82)
+#' plot(ggredist$randmcnally)
+#' plot(ggredist$natgeo)
 #' plot(ggredist$coast)
 #' plot(ggredist$larch)
 #'
