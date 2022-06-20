@@ -1,6 +1,6 @@
 #' Ye Olde Pennsylvania scales for `ggplot2`
 #'
-#' @rdname scale_ye_olde_pa
+#' @rdname scale_penn82
 #' @export
 #' @concept scales
 #'
@@ -9,13 +9,13 @@
 #' @md
 #' @examples
 #' # TODO
-scale_fill_ye_olde_pa <- function(...) {
+scale_fill_penn82 <- function(...) {
   ggplot2::discrete_scale(
     aesthetics = 'fill',
-    scale_name = 'ye_olde_pa',
+    scale_name = 'penn82',
     palette = function(n) {
       if (n <= 6) {
-        ye_olde_pa[seq_len(n)]
+        ggredist$penn82[seq_len(n)]
       } else {
         grDevices::colorRamp(c('#FCFCF4', '#BFA95E'))
       }

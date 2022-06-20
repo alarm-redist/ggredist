@@ -19,8 +19,8 @@ scale_fill_party_c(
   limits = 0:1,
   labels = scales::percent,
   oob = scales::squish,
-  ...,
-  reverse = FALSE
+  reverse = FALSE,
+  ...
 )
 
 scale_color_party_c(
@@ -29,10 +29,11 @@ scale_color_party_c(
   limits = 0:1,
   labels = scales::percent,
   oob = scales::squish,
+  reverse = FALSE,
   ...
 )
 
-scale_fill_party_d(labels = c("Rep.", "Dem."), ...)
+scale_fill_party_d(labels = c("Rep.", "Dem."), reverse = FALSE, ...)
 
 scale_color_party_d(labels = c("Rep.", "Dem."), reverse = FALSE, ...)
 
@@ -66,6 +67,7 @@ scale_colour_party_c(
   limits = 0:1,
   labels = scales::percent,
   oob = scales::squish,
+  reverse = FALSE,
   ...
 )
 
@@ -81,19 +83,21 @@ scale_colour_party_b(
 )
 }
 \arguments{
-\item{name}{name for scale. Default is \code{"Democratic share"}.}
+\item{name}{Name for scale. Default is \code{"Democratic share"}.}
 
 \item{midpoint}{Scale midpoint value. Default is \code{0.5}.}
 
 \item{limits}{Lower and upper limits for scale. Default is \code{0:1}.}
 
-\item{labels}{function to adjust scale labels. Default is \code{scales::percent}.}
+\item{labels}{Function to adjust scale labels. Default is \code{scales::percent}.}
 
-\item{oob}{function to deal with out of bounds. Default is \code{scales::squish()}.}
+\item{oob}{Function to deal with out of bounds. Default is \code{scales::squish()}.}
 
-\item{...}{additional arguments to \verb{ggplot::scale_*} functions}
+\item{reverse}{Whether to reverse red and blue.}
 
-\item{nice.breaks}{if \code{TRUE}, attempt to place breaks at nice values instead
+\item{...}{Additional arguments to \verb{ggplot::scale_*} functions}
+
+\item{nice.breaks}{If \code{TRUE}, attempt to place breaks at nice values instead
 of exactly evenly spaced between the limits.}
 }
 \description{
@@ -105,12 +109,12 @@ data(oregon)
 
 ggplot(oregon, aes(fill = ndv / (ndv + nrv))) +
     geom_sf(size = 0) +
-    scale_fill_party_c(limits=c(0.3, 0.7))
+    scale_fill_party_c(limits=c(0.3, 0.7)) +
     theme_map()
 
 ggplot(oregon, aes(fill = ndv / (ndv + nrv))) +
     geom_sf(size = 0) +
-    scale_fill_party_c(limits=c(0.3, 0.7))
+    scale_fill_party_b() +
     theme_map()
 
 }

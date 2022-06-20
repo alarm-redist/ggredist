@@ -18,18 +18,3 @@ theme_map <- function(...) {
       color = NA
     ), ...)
 }
-
-#' Plot Theme from Redistricting 2021 Blog
-#'
-#' @param ...
-#'
-#' @return ggplot2 theme
-#' @export
-#' @concept theme
-#'
-#' @examples
-#' # TODO
-#'
-theme_r21 <- function(...) {
-  ggplot2::theme_bw(base_family = 'Times', base_size = 12, ...)
-}

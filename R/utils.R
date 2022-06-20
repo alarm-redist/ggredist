@@ -20,15 +20,3 @@ plot.palette = function(x, ...) {
   if (!is.null(names(x)))
     text(1:n, 1.25, labels=names(x), col="black", cex=1)
 }
-
-
-
-#' Paste-to-hex
-#' @keywords internal
-#' @noRd
-pth = function(x) {
-  rgb = as.list(as.integer(strsplit(x, "\\s")[[1]]) / 256)
-  col = do.call(colorspace::sRGB, rgb)
-  str = paste0('"', colorspace::hex(col), '"')
-  code_output(str)
-}

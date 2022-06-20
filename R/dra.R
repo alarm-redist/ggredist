@@ -15,9 +15,9 @@ scale_fill_dra <- function(...) {
     scale_name = 'dra',
     palette = function(n) {
       if (n <= 12) {
-        dra[seq_len(n)]
+        ggredist$dra[seq_len(n)]
       } else {
-        rep(dra, ceiling(n / 12))[seq_len(n)]
+        rep(ggredist$dra, ceiling(n / 12))[seq_len(n)]
       }
     }
   )
