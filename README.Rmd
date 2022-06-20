@@ -16,18 +16,18 @@ knitr::opts_chunk$set(
 # ggredist
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/alarm-redist/ggredist/workflows/R-CMD-check/badge.svg)](https://github.com/alarm-redist/ggredist/actions)
+[![R-CMD-check](https://github.com/alarm-redist/ggredist/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/alarm-redist/ggredist/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-`ggredist` provides `ggplot2` extensions for political map making.
+`ggredist` provides `ggplot2` extensions for political mapmaking.
 
 ## Installation
 
 You can install the development version of ggredist from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("alarm-redist/ggredist")
+# install.packages("remotes")
+remotes::install_github("alarm-redist/ggredist")
 ```
 
 ## Example
