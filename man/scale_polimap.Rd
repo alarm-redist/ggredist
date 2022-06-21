@@ -31,13 +31,13 @@ Rand-McNally and National Geographic Color Scales for \code{ggplot2}
 library(ggplot2)
 data(oregon)
 
-ggplot(oregon, aes(fill = factor(cd_2020))) +
-    geom_sf(size = 0) +
+ggplot(oregon, aes(group = county)) +
+    geom_district() +
     scale_fill_randmcnally() +
     theme_map()
 
-ggplot(oregon, aes(fill = factor(cd_2020))) +
-    geom_sf(size = 0) +
+ggplot(oregon, aes(group = county)) +
+    geom_district() +
     scale_fill_natgeo() +
     theme_map()
 

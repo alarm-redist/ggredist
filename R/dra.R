@@ -6,8 +6,8 @@
 #' library(ggplot2)
 #' data(oregon)
 #'
-#' ggplot(oregon, aes(fill = factor(cd_2020))) +
-#'     geom_sf(size = 0) +
+#' ggplot(oregon, aes(group = county, fill=county)) +
+#'     geom_districts() +
 #'     scale_fill_dra() +
 #'     theme_map()
 #'

@@ -21,6 +21,12 @@ have the same color.
 }
 \examples{
 data(oregon)
-map_coloring(head(oregon))
+or_short = oregon[30:50, ]
+map_coloring(or_short)
+
+library(ggplot2)
+ggplot(or_short, aes(fill = map_coloring(or_short))) +
+    geom_sf() +
+    theme_map()
 
 }

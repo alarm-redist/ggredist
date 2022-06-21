@@ -31,7 +31,13 @@ adjacency = function(shp) {
 #'
 #' @examples
 #' data(oregon)
-#' map_coloring(head(oregon))
+#' or_short = oregon[30:50, ]
+#' map_coloring(or_short)
+#'
+#' library(ggplot2)
+#' ggplot(or_short, aes(fill = map_coloring(or_short))) +
+#'     geom_sf() +
+#'     theme_map()
 #'
 #' @export
 map_coloring = function(shp, min_coloring = TRUE) {
