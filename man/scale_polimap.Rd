@@ -32,12 +32,12 @@ library(ggplot2)
 data(oregon)
 
 ggplot(oregon, aes(group = county)) +
-    geom_districts() +
+    geom_district() +
     scale_fill_randmcnally() +
     theme_map()
 
 ggplot(oregon, aes(group = county)) +
-    geom_districts() +
+    geom_district() +
     scale_fill_natgeo() +
     theme_map()
 

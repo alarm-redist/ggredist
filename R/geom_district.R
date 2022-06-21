@@ -31,26 +31,22 @@
 #' data(oregon)
 #'
 #' ggplot(oregon, aes(group=county)) +
-#'     geom_districts() +
+#'     geom_district() +
 #'     scale_fill_penn82() +
 #'     theme_map()
 #'
 #' ggplot(oregon, aes(group=county, fill=pop)) +
-#'     geom_districts() +
+#'     geom_district() +
 #'     theme_map()
 #'
 #' ggplot(oregon, aes(group=cd_2020, fill=ndv, denom=ndv+nrv)) +
-#'     geom_districts() +
+#'     geom_district() +
 #'     scale_fill_party_c(limits=c(0.4, 0.6)) +
 #'     theme_map()
 #'
 #' @concept geoms
-#' @name StatDistricts
+#' @name StatDistrict
 NULL
-
-# mapping = NULL, data = NULL, geom = "districts",
-# position = "identity", na.rm = FALSE, is_coverage = FALSE,
-# show.legend = NA, inherit.aes = TRUE, ...)
 
 
 # original ggplot2:::geom_column from (c) 2020 ggplot2 authors
@@ -66,7 +62,12 @@ geom_column <- function (data) {
 }
 
 
-StatDistricts <- ggplot2::ggproto("StatDistricts", ggplot2::Stat,
+#' @export
+#' @rdname StatDistrict
+#' @usage NULL
+#' @format NULL
+StatDistrict <- ggplot2::ggproto(
+  "StatDistrict", ggplot2::Stat,
 
   setup_params = function(data, params) {
     if (!is.null(params$fill)) {
@@ -85,7 +86,7 @@ StatDistricts <- ggplot2::ggproto("StatDistricts", ggplot2::Stat,
     geometry_data = data[[geom_column(data)]]
     params$crs = sf::st_crs(geometry_data)
 
-    if (isFALSE(sf::st_is_longlat(sf::st_geometry(geometry_data))) && # planar
+    if (isFALSE(sf::st_is_longlat(geometry_data)) && # planar
         requireNamespace("geos", quietly=TRUE)) {
       merged_geom = sf::st_as_sfc(
         tapply(geometry_data, data$group, function(x) {
@@ -168,7 +169,13 @@ StatDistricts <- ggplot2::ggproto("StatDistricts", ggplot2::Stat,
   required_aes = c("geometry")
 )
 
-GeomDistricts <- ggplot2::ggproto("GeomDistricts", ggplot2::GeomSf,
+#' @export
+#' @rdname StatDistrict
+#' @usage NULL
+#' @format NULL
+GeomDistrict <- ggplot2::ggproto(
+  "GeomDistrict", ggplot2::GeomSf,
+
   default_aes = ggplot2::aes(
     colour = "#222222",
     fill = NULL,
@@ -183,16 +190,16 @@ GeomDistricts <- ggplot2::ggproto("GeomDistricts", ggplot2::GeomSf,
 )
 
 
-#' @rdname StatDistricts
+#' @rdname StatDistrict
 #' @concept geoms
 #' @order 2
 #' @export
-stat_districts <- function(mapping = NULL, data = NULL, geom = "districts",
-                           position = "identity", na.rm = FALSE,
-                           is_coverage = FALSE, min_col= FALSE,
-                           show.legend = NA, inherit.aes = TRUE, ...) {
+stat_district <- function(mapping = NULL, data = NULL, geom = ggredist::GeomDistrict,
+                          position = "identity", na.rm = FALSE,
+                          is_coverage = FALSE, min_col= FALSE,
+                          show.legend = NA, inherit.aes = TRUE, ...) {
   ggplot2::layer_sf(
-    stat = StatDistricts, data = data, mapping = mapping, geom = geom,
+    stat = StatDistrict, data = data, mapping = mapping, geom = geom,
     position = position, show.legend = show.legend, inherit.aes = inherit.aes,
     params = list(na.rm = na.rm,
                   is_coverage = is_coverage,
@@ -201,17 +208,17 @@ stat_districts <- function(mapping = NULL, data = NULL, geom = "districts",
   )
 }
 
-#' @rdname StatDistricts
+#' @rdname StatDistrict
 #' @concept geoms
 #' @order 1
 #' @export
-geom_districts <- function(mapping = NULL, data = NULL,
-                           position = "identity", na.rm = FALSE,
-                           is_coverage = FALSE, min_col = FALSE,
-                           show.legend = NA, inherit.aes = TRUE, ...) {
+geom_district <- function(mapping = NULL, data = NULL,
+                          position = "identity", na.rm = FALSE,
+                          is_coverage = FALSE, min_col = FALSE,
+                          show.legend = NA, inherit.aes = TRUE, ...) {
   c(
     ggplot2::layer_sf(
-      stat = StatDistricts, data = data, mapping = mapping, geom = GeomDistricts,
+      stat = StatDistrict, data = data, mapping = mapping, geom = GeomDistrict,
       position = position, show.legend = show.legend, inherit.aes = inherit.aes,
       params = list(na.rm = na.rm,
                     is_coverage = is_coverage,
