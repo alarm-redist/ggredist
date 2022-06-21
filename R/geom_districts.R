@@ -57,7 +57,7 @@ geom_column <- function (data) {
     "geometry"
   } else {
     if (length(w) > 1)
-      warn("more than one geometry column present: taking the first")
+      warning("more than one geometry column present: taking the first")
     w[[1]]
   }
 }
