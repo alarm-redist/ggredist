@@ -22,8 +22,17 @@
 #' ggplot(oregon, aes(group=county)) +
 #'     geom_district() +
 #'     geom_district_text() +
-#'     scale_fill_penn82() +
+#'     scale_fill_randmcnally() +
 #'     theme_map()
+#'
+#' ggplot(oregon, aes(group=cd_2020)) +
+#'   geom_district(lwd=0.9, color="#442222") +
+#'   geom_district(aes(group=county), lwd=0.4, lty="dashed", fill=NA) +
+#'   geom_district_text(aes(group=county, label=toupper(county)),
+#'                      size=2.2, check_overlap=T) +
+#'   geom_district_text() +
+#'   scale_fill_penn82() +
+#'   theme_map()
 #'
 #' @concept geoms
 #' @name StatDistrictCoordinates
@@ -62,6 +71,7 @@ StatDistrictCoordinates <- ggplot2::ggproto(
       points_sfc <- sf::st_transform(points_sfc, default_crs)
     }
 
+    # find closest unit to the centroid of each group
     xy <- as.data.frame(sf::st_coordinates(points_sfc))
     xy$area <- as.numeric(sf::st_area(data$geometry))
     xy$area <- xy$area / mean(xy$area)
@@ -75,31 +85,18 @@ StatDistrictCoordinates <- ggplot2::ggproto(
                  area = tot_area)
     }))
 
-    # locs <- as.matrix(centers[, 1:2])
-    # locs <- scale(locs, scale=FALSE)
-    # locs <- locs / sqrt(var(locs[,1]) + var(locs[,2]))
-    # locs <<- locs
-    # n <- nrow(locs)
-
-    # pen = function(x) {
-    #   x = matrix(x, nrow=n)
-    #   dm = as.matrix(dist(x))
-    #   pen_close = mean(vapply(seq_len(n), function(i) {
-    #     mean(1 / (0.01 + dm[-i, i]))
-    #   }, numeric(1)))
-    #   pen_far = mean(1e5 * rowSums((x - locs)^2))
-    #   print(c(pen_far, pen_close))
-    #   pen_close + pen_far
-    # }
-    # res = optim(locs, pen)
-    # print(res)
-
-    data.frame(
+    out = data.frame(
       group = unique(data$group),
       x = centers$X,
       y = centers$Y,
-      size = 1.25 * adjust * sqrt(centers$area)
+      size = adjust * sqrt(8 + centers$area)
     )
+
+    if (!is.null(data$label)) {
+      out$label = tapply(data$label, data$group, function(lab) lab[1])
+    }
+
+    out
   },
 
   default_aes = ggplot2::aes(x = ggplot2::after_stat(x),
@@ -109,9 +106,31 @@ StatDistrictCoordinates <- ggplot2::ggproto(
   required_aes = c("geometry")
 )
 
+
+#' @export
+#' @rdname StatDistrictCoordinates
+#' @usage NULL
+#' @format NULL
+GeomDistrictText <- ggplot2::ggproto(
+  "GeomDistrictText", ggplot2::GeomText,
+
+  default_aes = ggplot2::aes(
+    colour = "black",
+    size = 4,
+    angle = 0,
+    hjust = 0.5,
+    vjust = 0.5,
+    alpha = 0.6,
+    family = "",
+    fontface = "bold",
+    lineheight = 1.0
+  )
+)
+
+
 #' @rdname StatDistrictCoordinates
 #' @concept geoms
-#' @order 2
+#' @order 3
 #' @export
 stat_district_coordinates <- function(mapping = NULL, data = NULL, geom = "text",
                                       position = "identity", na.rm = FALSE,
@@ -120,24 +139,61 @@ stat_district_coordinates <- function(mapping = NULL, data = NULL, geom = "text"
   ggplot2::layer_sf(
     stat = StatDistrictCoordinates, data = data, mapping = mapping, geom = geom,
     position = position, show.legend = show.legend, inherit.aes = inherit.aes,
-    params = list(na.rm = na.rm, adjust = adjust, ...)
+      params = list(na.rm = na.rm,
+                    adjust = adjust,
+                    ...)
   )
 }
 
 #' @rdname StatDistrictCoordinates
 #' @concept geoms
-#' @order 2
+#' @order 1
 #' @export
 geom_district_text <- function(mapping = NULL, data = NULL,
                                position = "identity", na.rm = FALSE,
-                               adjust = 1.0,
+                               adjust = 1.0, check_overlap = FALSE, parse = FALSE,
                                show.legend = NA, inherit.aes = TRUE, ...) {
   c(
     ggplot2::layer_sf(
-      stat = StatDistrictCoordinates, data = data, mapping = mapping, geom = GeomText,
+      stat = StatDistrictCoordinates, data = data, mapping = mapping, geom = GeomDistrictText,
       position = position, show.legend = show.legend, inherit.aes = inherit.aes,
-      params = list(na.rm = na.rm, adjust = adjust, ...)
+      params = list(na.rm = na.rm,
+                    parse = parse,
+                    check_overlap = check_overlap,
+                    adjust = adjust,
+                    ...)
     ),
     ggplot2::coord_sf(default = TRUE)
   )
 }
+
+
+#' @rdname StatDistrictCoordinates
+#' @concept geoms
+#' @order 2
+#' @export
+geom_district_label <- function(mapping = NULL, data = NULL,
+                                position = "identity", na.rm = FALSE,
+                                label.padding = unit(0.25, "lines"),
+                                label.r = unit(0.15, "lines"),
+                                label.size = 0.25, parse = FALSE,
+                                adjust = 1.0, check_overlap = FALSE,
+                                show.legend = NA, inherit.aes = TRUE, ...) {
+  c(
+    ggplot2::layer_sf(
+      stat = StatDistrictCoordinates, data = data, mapping = mapping, geom = GeomLabel,
+      position = position, show.legend = show.legend, inherit.aes = inherit.aes,
+      params = list(na.rm = na.rm,
+                    label.padding = label.padding,
+                    label.r = label.r,
+                    label.size = label.size,
+                    parse = parse,
+                    check_overlap = check_overlap,
+                    adjust = adjust,
+                    ...)
+    ),
+    ggplot2::coord_sf(default = TRUE)
+  )
+}
+
+
