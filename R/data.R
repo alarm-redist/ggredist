@@ -5,6 +5,7 @@
 #'
 #' @name oregon
 #' @usage data("oregon")
+#' @concept data
 #' @format `sf` object
 
 #' \describe{

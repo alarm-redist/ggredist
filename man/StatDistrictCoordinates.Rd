@@ -27,12 +27,12 @@ geom_district_label(
   data = NULL,
   position = "identity",
   na.rm = FALSE,
-  label.padding = unit(0.25, "lines"),
-  label.r = unit(0.15, "lines"),
+  label.padding = ggplot2::unit(0.25, "lines"),
+  label.r = ggplot2::unit(0.15, "lines"),
   label.size = 0.25,
+  check_overlap = FALSE,
   parse = FALSE,
   adjust = 1,
-  check_overlap = FALSE,
   show.legend = NA,
   inherit.aes = TRUE,
   ...
@@ -59,12 +59,26 @@ stat_district_coordinates(
 
 \item{na.rm}{if \code{TRUE}, will silently remove missing values from calculations}
 
+\item{adjust}{A multiplicative scaling factor for the default label sizes}
+
+\item{check_overlap}{If \code{TRUE}, text that overlaps previous text in the same
+layer will not be plotted.}
+
+\item{parse}{If \code{TRUE}, the labels will be parsed into expressions and
+displayed as described in \code{\link[grDevices:plotmath]{?plotmath}}.}
+
 \item{show.legend}{Should this layer be included in the legends?}
 
 \item{inherit.aes}{If \code{FALSE}, overrides the default aesthetics, rather than
 combining with them.}
 
 \item{...}{Passed onto the underlying geoms.}
+
+\item{label.padding}{Padding around label}
+
+\item{label.r}{Radius of rounded corners}
+
+\item{label.size}{Size of label border (mm)}
 
 \item{geom}{The geometric object to use display the data}
 }
@@ -73,7 +87,8 @@ a \code{ggproto} object
 }
 \description{
 Aggregates shapefile according to the \code{group} aesthetic and positions labels
-for each region defined by \code{group}.
+for each region defined by \code{group}. By default, labels will be sized in rough
+proportion to the available area.
 }
 \examples{
 library(ggplot2)
@@ -89,8 +104,8 @@ ggplot(oregon, aes(group=cd_2020)) +
   geom_district(lwd=0.9, color="#442222") +
   geom_district(aes(group=county), lwd=0.4, lty="dashed", fill=NA) +
   geom_district_text(aes(group=county, label=toupper(county)),
-                     size=2.2, check_overlap=T) +
-  geom_district_text() +
+                     size=2.2, check_overlap=TRUE) +
+  geom_district_text(adjust=2) +
   scale_fill_penn82() +
   theme_map()
 

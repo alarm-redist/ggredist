@@ -1,9 +1,10 @@
 url: https://alarm-redist.github.io/ggredist/
 template:
   bootstrap: 5
-  bootswatch: yeti
+  bootswatch: journal
+  bg: light
 reference:
-- title: Color
+- title: Colors
   desc:  Scales and palettes for coloring maps
 - contents:
   - ggredist
@@ -23,6 +24,5 @@ reference:
 - title: Miscellaneous
   desc: Other Functions
   contents:
-  - lacks_concepts(c("colors", "labels"))
-  - -oregon
+  - lacks_concepts(c("colors", "labels", "data"))
 

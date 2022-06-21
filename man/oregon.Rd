@@ -26,3 +26,4 @@ This data contains geographic, demographic, and political information on the
 data(oregon)
 oregon[, 1:6] # final column requires `sf` library
 }
+\concept{data}
