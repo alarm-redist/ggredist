@@ -7,7 +7,7 @@
 #' data(oregon)
 #'
 #' ggplot(oregon, aes(group = county)) +
-#'     geom_district() +
+#'     geom_districts() +
 #'     scale_fill_penn82() +
 #'     theme_map()
 #'

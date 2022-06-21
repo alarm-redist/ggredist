@@ -7,12 +7,12 @@
 #' data(oregon)
 #'
 #' ggplot(oregon, aes(group = county)) +
-#'     geom_district() +
+#'     geom_districts() +
 #'     scale_fill_coast() +
 #'     theme_map()
 #'
 #' ggplot(oregon, aes(group = county)) +
-#'     geom_district() +
+#'     geom_districts() +
 #'     scale_fill_larch() +
 #'     theme_map()
 #'
