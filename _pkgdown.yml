@@ -3,14 +3,17 @@ template:
   bootstrap: 5
   bootswatch: yeti
 reference:
-  - title: Color Scales and Palettes
-  - contents:
-    - ggredist
-    - has_concept("colors")
-  - title: Labeling Functions
-  - contents:
-    - has_concept("labels")
-  - title: Data
-  - contents:
-    - oregon
+- title: Color
+  desc:  Scales and palettes for coloring maps
+- contents:
+  - ggredist
+  - has_concept("colors")
+- title: Labels
+  desc: Helpful labeling functions
+- contents:
+  - has_concept("labels")
+- title: Data
+  desc: Example data included in the package
+- contents:
+  - oregon
 
