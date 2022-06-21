@@ -16,7 +16,10 @@
     <loc>https://alarm-redist.github.io/ggredist/index.html</loc>
   </url>
   <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/StatDistricts.html</loc>
+    <loc>https://alarm-redist.github.io/ggredist/reference/StatDistrict.html</loc>
+  </url>
+  <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/StatDistrictCoordinates.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/ggredist.html</loc>
