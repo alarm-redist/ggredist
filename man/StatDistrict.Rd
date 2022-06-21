@@ -94,6 +94,7 @@ ggplot(oregon, aes(group=cd_2020, fill=ndv, denom=ndv+nrv)) +
     geom_district() +
     scale_fill_party_c(limits=c(0.4, 0.6)) +
     theme_map()
+
 ggplot(oregon, aes(group=county)) +
     geom_district() +
     geom_district(buffer=-5000, fill="#ffffffcc", color=NA) +
