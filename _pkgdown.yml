@@ -8,6 +8,10 @@ reference:
 - contents:
   - ggredist
   - has_concept("colors")
+- title: Geometries
+  desc: `ggplot2` extensions for plotting maps
+- contents:
+  - has_concept("geoms")
 - title: Labels
   desc: Helpful labeling functions
 - contents:
