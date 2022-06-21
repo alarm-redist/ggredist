@@ -72,8 +72,8 @@ proportion to the available area.</p>
   data <span class="op">=</span> <span class="cn">NULL</span>,
   position <span class="op">=</span> <span class="st">"identity"</span>,
   na.rm <span class="op">=</span> <span class="cn">FALSE</span>,
-  label.padding <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html" class="external-link">unit</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="st">"lines"</span><span class="op">)</span>,
-  label.r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html" class="external-link">unit</a></span><span class="op">(</span><span class="fl">0.15</span>, <span class="st">"lines"</span><span class="op">)</span>,
+  label.padding <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/unit.html" class="external-link">unit</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="st">"lines"</span><span class="op">)</span>,
+  label.r <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/unit.html" class="external-link">unit</a></span><span class="op">(</span><span class="fl">0.15</span>, <span class="st">"lines"</span><span class="op">)</span>,
   label.size <span class="op">=</span> <span class="fl">0.25</span>,
   check_overlap <span class="op">=</span> <span class="cn">FALSE</span>,
   parse <span class="op">=</span> <span class="cn">FALSE</span>,
@@ -108,6 +108,12 @@ proportion to the available area.</p>
 <dd><p>if <code>TRUE</code>, will silently remove missing values from calculations</p></dd>
 <dt>adjust</dt>
 <dd><p>A multiplicative scaling factor for the default label sizes</p></dd>
+<dt>check_overlap</dt>
+<dd><p>If <code>TRUE</code>, text that overlaps previous text in the same
+layer will not be plotted.</p></dd>
+<dt>parse</dt>
+<dd><p>If <code>TRUE</code>, the labels will be parsed into expressions and
+displayed as described in <code><a href="https://rdrr.io/r/grDevices/plotmath.html" class="external-link">?plotmath</a></code>.</p></dd>
 <dt>show.legend</dt>
 <dd><p>Should this layer be included in the legends?</p></dd>
 <dt>inherit.aes</dt>
@@ -115,6 +121,12 @@ proportion to the available area.</p>
 combining with them.</p></dd>
 <dt>...</dt>
 <dd><p>Passed onto the underlying geoms.</p></dd>
+<dt>label.padding</dt>
+<dd><p>Padding around label</p></dd>
+<dt>label.r</dt>
+<dd><p>Radius of rounded corners</p></dd>
+<dt>label.size</dt>
+<dd><p>Size of label border (mm)</p></dd>
 <dt>geom</dt>
 <dd><p>The geometric object to use display the data</p></dd>
 </dl></div>
@@ -139,7 +151,7 @@ combining with them.</p></dd>
 <span class="r-in">  <span class="fu"><a href="StatDistrict.html">geom_district</a></span><span class="op">(</span>lwd<span class="op">=</span><span class="fl">0.9</span>, color<span class="op">=</span><span class="st">"#442222"</span><span class="op">)</span> <span class="op">+</span></span>
 <span class="r-in">  <span class="fu"><a href="StatDistrict.html">geom_district</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>group<span class="op">=</span><span class="va">county</span><span class="op">)</span>, lwd<span class="op">=</span><span class="fl">0.4</span>, lty<span class="op">=</span><span class="st">"dashed"</span>, fill<span class="op">=</span><span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
 <span class="r-in">  <span class="fu">geom_district_text</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>group<span class="op">=</span><span class="va">county</span>, label<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">toupper</a></span><span class="op">(</span><span class="va">county</span><span class="op">)</span><span class="op">)</span>,</span>
-<span class="r-in">                     size<span class="op">=</span><span class="fl">2.2</span>, check_overlap<span class="op">=</span><span class="cn">T</span><span class="op">)</span> <span class="op">+</span></span>
+<span class="r-in">                     size<span class="op">=</span><span class="fl">2.2</span>, check_overlap<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
 <span class="r-in">  <span class="fu">geom_district_text</span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
 <span class="r-in">  <span class="fu"><a href="scale_penn82.html">scale_fill_penn82</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span class="r-in">  <span class="fu"><a href="theme_map.html">theme_map</a></span><span class="op">(</span><span class="op">)</span></span>
