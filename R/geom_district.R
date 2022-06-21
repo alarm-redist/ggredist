@@ -19,6 +19,9 @@
 #'   shapefiles if `geos` is not installed or the shapefile is not projected.
 #' @param min_col If `TRUE`, try to minimize the number of colors used. May
 #'   be necessary for short palettes.
+#' @param buffer Optionally buffer the merged geometries. Negative values will
+#'   shrink geometries towards the center and can be used for a "glowing
+#'   boundary" effect (see examples).
 #' @param show.legend Should this layer be included in the legends?
 #' @param inherit.aes If `FALSE`, overrides the default aesthetics, rather than
 #'   combining with them.
@@ -42,6 +45,11 @@
 #' ggplot(oregon, aes(group=cd_2020, fill=ndv, denom=ndv+nrv)) +
 #'     geom_district() +
 #'     scale_fill_party_c(limits=c(0.4, 0.6)) +
+#'     theme_map()
+#' ggplot(oregon, aes(group=county)) +
+#'     geom_district() +
+#'     geom_district(buffer=-5000, fill="#ffffffcc", color=NA) +
+#'     scale_fill_natgeo() +
 #'     theme_map()
 #'
 #' @concept geoms
@@ -79,7 +87,7 @@ StatDistrict <- ggplot2::ggproto(
     params
   },
 
-  compute_layer = function(self, data, params, layout, min_col = FALSE) {
+  compute_layer = function(self, data, params, layout) {
     if (all(data$group == -1)) data$group = 1
     data$group = factor(data$group)
 
@@ -100,13 +108,18 @@ StatDistrict <- ggplot2::ggproto(
         crs = params$crs)
     }
     names(merged_geom) <- NULL
-    params$merged_geom <- merged_geom
 
     if (nlevels(data$group) <= 6) {
       params$coloring <- levels(data$group)
     } else {
       params$coloring <- map_coloring(merged_geom, params$min_col)
     }
+
+    if (params$buffer != 0) {
+      merged_geom <- sf::st_buffer(merged_geom, params$buffer)
+    }
+
+    params$merged_geom <- merged_geom
 
     # add coord to the params, so it can be forwarded to compute_group()
     params$coord <- layout$coord
@@ -116,7 +129,7 @@ StatDistrict <- ggplot2::ggproto(
   # st_union by group
   compute_group = function(data, scales, coord, crs, merged_geom, coloring,
                            na.rm=FALSE, is_coverage=FALSE, min_col=FALSE,
-                           fill=NULL) {
+                           buffer=0, fill=NULL) {
     if (!inherits(coord, "CoordSf")) {
       stop("`stat_districts()` can only be used with `coord_sf()`")
     }
@@ -196,7 +209,7 @@ GeomDistrict <- ggplot2::ggproto(
 #' @export
 stat_district <- function(mapping = NULL, data = NULL, geom = ggredist::GeomDistrict,
                           position = "identity", na.rm = FALSE,
-                          is_coverage = FALSE, min_col= FALSE,
+                          is_coverage = FALSE, min_col= FALSE, buffer = 0,
                           show.legend = NA, inherit.aes = TRUE, ...) {
   ggplot2::layer_sf(
     stat = StatDistrict, data = data, mapping = mapping, geom = geom,
@@ -204,6 +217,7 @@ stat_district <- function(mapping = NULL, data = NULL, geom = ggredist::GeomDist
     params = list(na.rm = na.rm,
                   is_coverage = is_coverage,
                   min_col = min_col,
+                  buffer = buffer,
                   ...)
   )
 }
@@ -214,7 +228,7 @@ stat_district <- function(mapping = NULL, data = NULL, geom = ggredist::GeomDist
 #' @export
 geom_district <- function(mapping = NULL, data = NULL,
                           position = "identity", na.rm = FALSE,
-                          is_coverage = FALSE, min_col = FALSE,
+                          is_coverage = FALSE, min_col = FALSE, buffer = 0,
                           show.legend = NA, inherit.aes = TRUE, ...) {
   c(
     ggplot2::layer_sf(
@@ -223,6 +237,7 @@ geom_district <- function(mapping = NULL, data = NULL,
       params = list(na.rm = na.rm,
                     is_coverage = is_coverage,
                     min_col = min_col,
+                    buffer = buffer,
                     ...)
     ),
     ggplot2::coord_sf(default = TRUE)

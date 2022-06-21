@@ -15,6 +15,7 @@ geom_district(
   na.rm = FALSE,
   is_coverage = FALSE,
   min_col = FALSE,
+  buffer = 0,
   show.legend = NA,
   inherit.aes = TRUE,
   ...
@@ -28,6 +29,7 @@ stat_district(
   na.rm = FALSE,
   is_coverage = FALSE,
   min_col = FALSE,
+  buffer = 0,
   show.legend = NA,
   inherit.aes = TRUE,
   ...
@@ -47,6 +49,10 @@ shapefiles if \code{geos} is not installed or the shapefile is not projected.}
 
 \item{min_col}{If \code{TRUE}, try to minimize the number of colors used. May
 be necessary for short palettes.}
+
+\item{buffer}{Optionally buffer the merged geometries. Negative values will
+shrink geometries towards the center and can be used for a "glowing
+boundary" effect (see examples).}
 
 \item{show.legend}{Should this layer be included in the legends?}
 
@@ -87,6 +93,11 @@ ggplot(oregon, aes(group=county, fill=pop)) +
 ggplot(oregon, aes(group=cd_2020, fill=ndv, denom=ndv+nrv)) +
     geom_district() +
     scale_fill_party_c(limits=c(0.4, 0.6)) +
+    theme_map()
+ggplot(oregon, aes(group=county)) +
+    geom_district() +
+    geom_district(buffer=-5000, fill="#ffffffcc", color=NA) +
+    scale_fill_natgeo() +
     theme_map()
 
 }

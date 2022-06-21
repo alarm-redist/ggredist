@@ -93,7 +93,10 @@ StatDistrictCoordinates <- ggplot2::ggproto(
     )
 
     if (!is.null(data$label)) {
-      out$label = tapply(data$label, data$group, function(lab) lab[1])
+      out$label = tapply(data$label, data$group, function(y) y[1])
+    }
+    if (!is.null(data$color)) {
+      out$color = tapply(data$color, data$group, function(y) y[1])
     }
 
     out
