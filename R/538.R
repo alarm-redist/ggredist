@@ -22,6 +22,7 @@ scale_fill_538 <- function(...) {
 }
 
 #' @rdname scale_538
+#' @concept colors
 #' @export
 scale_color_538 <- function(...) {
   ggplot2::binned_scale('color', '538',

@@ -21,11 +21,13 @@ scale_fill_dra <- function(...) {
 
 
 #' @rdname scale_dra
+#' @concept colors
 #' @export
 scale_color_dra <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'dra',
                           palette = rot_pal(ggredist$dra))
 }
 #' @rdname scale_dra
+#' @concept colors
 #' @export
 scale_colour_dra = scale_color_dra

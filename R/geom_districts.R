@@ -20,10 +20,9 @@ StatDistricts <- ggplot2::ggproto("StatDistricts", ggplot2::Stat,
   },
 
   # st_union by group
-  compute_group = function(data, scales, coord, na.rm=FALSE) {
+  compute_group = function(data, scales, coord, na.rm=FALSE, is_coverage=FALSE) {
     geometry_data = data[[geom_column(data)]]
     geometry_crs = sf::st_crs(geometry_data)
-    bbox = sf::st_bbox(geometry_data)
 
     if (is.null(data$fill)) {
         fill = as.character(data$group[1])
@@ -37,9 +36,10 @@ StatDistricts <- ggplot2::ggproto("StatDistricts", ggplot2::Stat,
     out = data.frame(
       group = data$group[1],
       fill = fill,
-      geometry = sf::st_union(geometry_data)
+      geometry = sf::st_union(geometry_data, is_coverage=is_coverage)
     )
 
+    bbox = sf::st_bbox(out$geometry)
     # copied from StatSf <https://github.com/tidyverse/ggplot2/blob/main/R/stat-sf.R>
     coord$record_bbox(
       xmin = bbox[["xmin"]], xmax = bbox[["xmax"]],
@@ -66,11 +66,11 @@ StatDistricts <- ggplot2::ggproto("StatDistricts", ggplot2::Stat,
 
 
 stat_districts <- function(mapping = NULL, data = NULL, geom = "sf",
-                           position = "identity", na.rm = FALSE, show.legend = NA,
-                           inherit.aes = TRUE, ...) {
+                           position = "identity", na.rm = FALSE, is_coverage = FALSE,
+                           show.legend = NA, inherit.aes = TRUE, ...) {
   ggplot2::layer(
     stat = StatDistricts, data = data, mapping = mapping, geom = geom,
     position = position, show.legend = show.legend, inherit.aes = inherit.aes,
-    params = list(na.rm = na.rm, ...)
+    params = list(na.rm = na.rm, is_coverage = is_coverage, ...)
   )
 }

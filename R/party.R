@@ -29,6 +29,7 @@
 NULL
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_fill_party_c <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
                                labels = label_party_pct(), oob = scales::squish,
@@ -50,6 +51,7 @@ scale_fill_party_c <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1
 
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_color_party_c <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
                                 labels = label_party_pct(), oob = scales::squish,
@@ -70,6 +72,7 @@ scale_color_party_c <- function(name = 'Vote share', midpoint = 0.5, limits = 0:
 }
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_fill_party_d <- function(labels = c('Rep.', 'Dem.'), reverse = FALSE, ...) {
   pal = c(ggredist$partisan[2], ggredist$partisan[14])
@@ -79,6 +82,7 @@ scale_fill_party_d <- function(labels = c('Rep.', 'Dem.'), reverse = FALSE, ...)
 }
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_color_party_d <- function(labels = c('Rep.', 'Dem.'), reverse = FALSE, ...) {
   pal = c(ggredist$partisan[2], ggredist$partisan[14])
@@ -89,6 +93,7 @@ scale_color_party_d <- function(labels = c('Rep.', 'Dem.'), reverse = FALSE, ...
 
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_fill_party_b <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
                                labels = label_party_pct(), oob = scales::squish,
@@ -111,6 +116,7 @@ scale_fill_party_b <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1
 }
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_color_party_b <- function(name = 'Vote share', midpoint = 0.5, limits = 0:1,
                                 labels = label_party_pct(), oob = scales::squish,
@@ -134,11 +140,14 @@ scale_color_party_b <- function(name = 'Vote share', midpoint = 0.5, limits = 0:
 
 
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_colour_party_d = scale_color_party_d
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_colour_party_c = scale_color_party_c
 #' @rdname scale_party
+#' @concept colors
 #' @export
 scale_colour_party_b = scale_color_party_b

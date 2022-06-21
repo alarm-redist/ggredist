@@ -25,17 +25,20 @@ scale_fill_randmcnally <- function(...) {
 }
 
 #' @rdname scale_polimap
+#' @concept colors
 #' @export
 scale_color_randmcnally <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'randmcnally',
                           palette = rot_pal(ggredist$randmcnally))
 }
 #' @rdname scale_polimap
+#' @concept colors
 #' @export
 scale_colour_randmcnally = scale_color_randmcnally
 
 
 #' @rdname scale_polimap
+#' @concept colors
 #' @export
 scale_fill_natgeo <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'natgeo',
@@ -43,11 +46,13 @@ scale_fill_natgeo <- function(...) {
 }
 
 #' @rdname scale_polimap
+#' @concept colors
 #' @export
 scale_color_natgeo <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'natgeo',
                           palette = rot_pal(ggredist$natgeo))
 }
 #' @rdname scale_polimap
+#' @concept colors
 #' @export
 scale_colour_natgeo = scale_color_natgeo

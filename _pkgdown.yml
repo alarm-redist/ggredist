@@ -16,4 +16,9 @@ reference:
   desc: Example data included in the package
 - contents:
   - oregon
+- title: Miscellaneous
+  desc: Other Functions
+  contents:
+  - lacks_concepts(c("colors", "labels"))
+  - -oregon
 

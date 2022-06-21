@@ -31,6 +31,7 @@ label_party_margin = function(midpoint = 0.5, reverse = FALSE, accuracy=1) {
   }
 }
 
+#' @concept labels
 #' @rdname label_party
 #' @export
 label_party_pct = function(midpoint = 0.5, reverse = FALSE, accuracy=1) {
