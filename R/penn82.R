@@ -1,6 +1,6 @@
 #' Historical Pennsylvania Color Scale for `ggplot2`
 #'
-#' @param ... Arguments passed on to [ggplot2::discrete_scale()
+#' @param ... Arguments passed on to [ggplot2::discrete_scale()]
 #'
 #' @examples
 #' library(ggplot2)
@@ -16,7 +16,7 @@
 #' @export
 scale_fill_penn82 <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'penn82',
-                          palette = rot_pal(ggredist$penn82))
+                          palette = rot_pal(ggredist$penn82), ...)
 }
 
 #' @rdname scale_penn82
@@ -24,7 +24,7 @@ scale_fill_penn82 <- function(...) {
 #' @export
 scale_color_penn82 <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'penn82',
-                          palette = rot_pal(ggredist$penn82))
+                          palette = rot_pal(ggredist$penn82), ...)
 }
 #' @rdname scale_penn82
 #' @concept colors

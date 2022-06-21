@@ -13,7 +13,7 @@ scale_color_dra(...)
 scale_colour_dra(...)
 }
 \arguments{
-\item{...}{Arguments passed on to [ggplot2::discrete_scale()}
+\item{...}{Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}}}
 }
 \description{
 Dave's Redistricting App classic scale for \code{ggplot2}

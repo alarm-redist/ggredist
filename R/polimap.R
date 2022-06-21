@@ -1,6 +1,6 @@
 #' Rand-McNally and National Geographic Color Scales for `ggplot2`
 #'
-#' @param ... Arguments passed on to [ggplot2::discrete_scale()
+#' @param ... Arguments passed on to [ggplot2::discrete_scale()]
 #'
 #' @examples
 #' library(ggplot2)
@@ -21,7 +21,7 @@
 #' @export
 scale_fill_randmcnally <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'randmcnally',
-                          palette = rot_pal(ggredist$randmcnally))
+                          palette = rot_pal(ggredist$randmcnally), ...)
 }
 
 #' @rdname scale_polimap
@@ -29,7 +29,7 @@ scale_fill_randmcnally <- function(...) {
 #' @export
 scale_color_randmcnally <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'randmcnally',
-                          palette = rot_pal(ggredist$randmcnally))
+                          palette = rot_pal(ggredist$randmcnally), ...)
 }
 #' @rdname scale_polimap
 #' @concept colors
@@ -42,7 +42,7 @@ scale_colour_randmcnally = scale_color_randmcnally
 #' @export
 scale_fill_natgeo <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'natgeo',
-                          palette = rot_pal(ggredist$natgeo))
+                          palette = rot_pal(ggredist$natgeo), ...)
 }
 
 #' @rdname scale_polimap
@@ -50,7 +50,7 @@ scale_fill_natgeo <- function(...) {
 #' @export
 scale_color_natgeo <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'natgeo',
-                          palette = rot_pal(ggredist$natgeo))
+                          palette = rot_pal(ggredist$natgeo), ...)
 }
 #' @rdname scale_polimap
 #' @concept colors

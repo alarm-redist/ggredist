@@ -22,7 +22,7 @@ scale_color_larch(...)
 scale_colour_larch(...)
 }
 \arguments{
-\item{...}{Arguments passed on to [ggplot2::discrete_scale()}
+\item{...}{Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}}}
 }
 \description{
 Nature-derived Color Scales for \code{ggplot2}

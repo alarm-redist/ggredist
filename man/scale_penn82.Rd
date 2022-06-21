@@ -13,7 +13,7 @@ scale_color_penn82(...)
 scale_colour_penn82(...)
 }
 \arguments{
-\item{...}{Arguments passed on to [ggplot2::discrete_scale()}
+\item{...}{Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}}}
 }
 \description{
 Historical Pennsylvania Color Scale for \code{ggplot2}
