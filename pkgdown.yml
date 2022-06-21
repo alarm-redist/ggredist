@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 2.0.4
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-06-20T22:46Z
+last_built: 2022-06-21T00:22Z
 urls:
   reference: https://alarm-redist.github.io/ggredist/reference
   article: https://alarm-redist.github.io/ggredist/articles
