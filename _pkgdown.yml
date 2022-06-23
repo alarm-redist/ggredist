@@ -12,6 +12,8 @@ reference:
 - title: Geometries
   desc: "`ggplot2` extensions for plotting maps"
 - contents:
+  - geom_district
+  - geom_district_text
   - has_concept("geoms")
 - title: Labels
   desc: Helpful labeling functions
@@ -20,7 +22,7 @@ reference:
 - title: Data
   desc: Example data included in the package
 - contents:
-  - oregon
+  - has_concept("data")
 - title: Miscellaneous
   desc: Other Functions
   contents:

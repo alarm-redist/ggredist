@@ -20,7 +20,7 @@
 #'
 #' @examples
 #' data(oregon)
-#' oregon[, 1:6] # final column requires `sf` library
+#' oregon[, 1:6]
 NULL
 
 #' Insterstate Shapefile
