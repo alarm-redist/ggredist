@@ -24,7 +24,7 @@ geom_district(
 stat_district(
   mapping = NULL,
   data = NULL,
-  geom = ggredist::GeomDistrict,
+  geom = GeomDistrict,
   position = "identity",
   na.rm = FALSE,
   is_coverage = FALSE,

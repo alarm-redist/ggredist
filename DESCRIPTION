@@ -10,6 +10,7 @@ Description: Provides `ggplot2` extensions for political mapmaking, including
 Depends: 
     R (>= 2.10)
 Imports: 
+    grDevices,
     ggplot2,
     scales
 Suggests: 

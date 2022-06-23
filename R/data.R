@@ -22,3 +22,44 @@
 #' data(oregon)
 #' oregon[, 1:6] # final column requires `sf` library
 NULL
+
+#' Insterstate Shapefile
+#'
+#' This data contains geometry information for the U.S. Interstate Highway System.
+#' It was processed from the U.S. Census Bureau TIGER/Line Shapefile system.
+#'
+#' @name interstates
+#' @usage data("interstates")
+#' @concept data
+#' @format `sf` object
+
+#' \describe{
+#' \item{\code{name}}{Census Bureau name for the interstate}
+#' \item{\code{geometry}}{The `sf` geometry column containing the geographic information.}
+#' }
+#'
+#' @examples
+#' data(interstates)
+NULL
+
+#' U.S. Cities
+#'
+#' This data contains the location, name, and 2006 population of U.S. cities and
+#' large towns.
+#'
+#' @name cities
+#' @usage data("cities")
+#' @concept data
+#' @format `sf` object
+
+#' \describe{
+#' \item{\code{name}}{City name.}
+#' \item{\code{state}}{City state.}
+#' \item{\code{pop_2006}}{City population in 2006.}
+#' \item{\code{capital}}{TRUE if the city is a capital.}
+#' \item{\code{geometry}}{The `sf` geometry column containing the geographic information.}
+#' }
+#'
+#' @examples
+#' data(cities)
+NULL

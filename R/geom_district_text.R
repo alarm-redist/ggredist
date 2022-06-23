@@ -63,7 +63,7 @@ find_label_loc = function(d) {
   }
 
   # rescale to 0-1 and construct edge
-  hull_idx = chull(d$X, d$Y)
+  hull_idx = grDevices::chull(d$X, d$Y)
   hull = data.frame(X = (d$X[hull_idx] - bbox[1, 1]) / sc[1],
                     Y = (d$Y[hull_idx] - bbox[1, 2]) / sc[2])
   hull = data.frame(X = approx(c(hull$X, hull$X[1]), n=60)$y,

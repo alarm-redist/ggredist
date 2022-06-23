@@ -174,7 +174,6 @@ StatDistrict <- ggplot2::ggproto(
     out$ymin <- min(bbox_trans$y)
     out$ymax <- max(bbox_trans$y)
 
-    # print(str(out))
     out
   },
 
@@ -208,7 +207,7 @@ GeomDistrict <- ggplot2::ggproto(
 #' @concept geoms
 #' @order 2
 #' @export
-stat_district <- function(mapping = NULL, data = NULL, geom = ggredist::GeomDistrict,
+stat_district <- function(mapping = NULL, data = NULL, geom = GeomDistrict,
                           position = "identity", na.rm = FALSE,
                           is_coverage = FALSE, min_col= FALSE, buffer = 0,
                           show.legend = NA, inherit.aes = TRUE, ...) {
