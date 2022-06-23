@@ -47,10 +47,49 @@
 #' @name StatDistrictCoordinates
 NULL
 
-# label.padding = unit(0.25, "lines"),
-# label.r = unit(0.15, "lines"),
-# label.size = 0.25,
-# check_overlap = FALSE, parse = FALSE,
+
+# Helper to find best label location
+# takes in d, with X, Y + area for every precinct's center
+# returns a 1-row data frame with X,Y for label + estimated size
+find_label_loc = function(d) {
+  tot_area = sum(d$area)
+  bbox = cbind(range(d$X), range(d$Y))
+
+  sc = c(diff(bbox[, 1]), diff(bbox[, 2]))
+  if (any(sc == 0)) {
+    return(data.frame(X = weighted.mean(d$X, d$area),
+                      Y = weighted.mean(d$Y, d$area),
+                      size = sqrt(tot_area * 0.1)))
+  }
+
+  # rescale to 0-1 and construct edge
+  hull_idx = chull(d$X, d$Y)
+  hull = data.frame(X = (d$X[hull_idx] - bbox[1, 1]) / sc[1],
+                    Y = (d$Y[hull_idx] - bbox[1, 2]) / sc[2])
+  hull = data.frame(X = approx(c(hull$X, hull$X[1]), n=60)$y,
+                    Y = approx(c(hull$Y, hull$Y[1]), n=60)$y)
+
+  # maximize minimum distance to edge
+  res = optim(c(0.5, 0.5), function(pt) {
+    -min((pt[1] - hull$X)^2 + (pt[2] - hull$Y)^2)
+  })
+  ctr = bbox[1, ] + res$par * sc # scale back
+  # average with centroid
+  centroid = c(weighted.mean(d$X, d$area), weighted.mean(d$Y, d$area))
+  ctr = 0.6*ctr + 0.4*centroid
+  # ctr = 0.8*ctr + 0.2*centroid
+
+  # find nearest precincts to center...
+  dists = abs(d$X - ctr[1]) + abs(d$Y - ctr[2])
+  idx = head(order(dists), 5)
+
+  # ... and take a distance/area -weighted average
+  wts = (d$area[idx])^(1/4) / (1e-6 + dists[idx])
+  data.frame(X = weighted.mean(d$X[idx], wts),
+             Y = weighted.mean(d$Y[idx], wts),
+             size = sqrt(tot_area))
+}
+
 
 #' @export
 #' @rdname StatDistrictCoordinates
@@ -90,23 +129,13 @@ StatDistrictCoordinates <- ggplot2::ggproto(
     xy$area <- as.numeric(sf::st_area(data$geometry))
     xy$area <- xy$area / mean(xy$area)
     xy <- split(xy, data$group)
-    centers = do.call(rbind, lapply(xy, function(d) {
-      tot_area = sum(d$area)
-      ctr_x = sum(d$X * d$area) / tot_area
-      ctr_y = sum(d$Y * d$area) / tot_area
-      dists = abs(d$X - ctr_x) + abs(d$Y - ctr_y)
-      idx = head(order(dists), 8)
-      wts = (d$area[idx])^(1/4) / (1e-6 + dists[idx])
-      data.frame(X = weighted.mean(d$X[idx], wts),
-                 Y = weighted.mean(d$Y[idx], wts),
-                 area = tot_area)
-    }))
+    centers = do.call(rbind, lapply(xy, find_label_loc))
 
     out = data.frame(
-      group = unique(data$group),
+      group = rownames(centers),
       x = centers$X,
       y = centers$Y,
-      size = adjust * sqrt(8 + centers$area)
+      size = adjust * 6 * (centers$size / mean(centers$size))^(2/3)
     )
 
     if (!is.null(data$label)) {

@@ -4,3 +4,9 @@ docs
 .Rdata
 .httr-oauth
 .DS_Store
+
+*.tmp
+*.bak
+*.swp
+
+pkgdown/

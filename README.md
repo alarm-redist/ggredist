@@ -34,6 +34,8 @@ ggplot(oregon, aes(group=cd_2020)) +
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
+See more in [the reference](/ggredist/reference/).
+
 ## Installation
 
 You can install the development version of ggredist from

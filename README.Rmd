@@ -43,6 +43,8 @@ ggplot(oregon, aes(group=cd_2020)) +
   theme_map()
 ```
 
+See more in [the reference](/ggredist/reference/).
+
 
 ## Installation
 
