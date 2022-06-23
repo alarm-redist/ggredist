@@ -16,16 +16,25 @@
     <loc>https://alarm-redist.github.io/ggredist/index.html</loc>
   </url>
   <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/StatCityRoad.html</loc>
+  </url>
+  <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/StatDistrict.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/StatDistrictCoordinates.html</loc>
   </url>
   <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/cities.html</loc>
+  </url>
+  <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/ggredist.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://alarm-redist.github.io/ggredist/reference/interstates.html</loc>
   </url>
   <url>
     <loc>https://alarm-redist.github.io/ggredist/reference/label_party.html</loc>
