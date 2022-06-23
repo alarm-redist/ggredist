@@ -59,7 +59,7 @@ find_label_loc = function(d) {
   if (any(sc == 0)) {
     return(data.frame(X = weighted.mean(d$X, d$area),
                       Y = weighted.mean(d$Y, d$area),
-                      size = sqrt(tot_area * 0.1)))
+                      size = tot_area))
   }
 
   # rescale to 0-1 and construct edge
@@ -87,7 +87,7 @@ find_label_loc = function(d) {
   wts = (d$area[idx])^(1/4) / (1e-6 + dists[idx])
   data.frame(X = weighted.mean(d$X[idx], wts),
              Y = weighted.mean(d$Y[idx], wts),
-             size = sqrt(tot_area))
+             size = tot_area)
 }
 
 
@@ -135,7 +135,7 @@ StatDistrictCoordinates <- ggplot2::ggproto(
       group = rownames(centers),
       x = centers$X,
       y = centers$Y,
-      size = adjust * 6 * (centers$size / mean(centers$size))^(2/3)
+      size = adjust * 20 * (centers$size / sum(centers$size))^(1/3)
     )
 
     if (!is.null(data$label)) {
