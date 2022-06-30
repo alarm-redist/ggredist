@@ -44,7 +44,7 @@ NULL
 
 #' U.S. Cities
 #'
-#' This data contains the location, name, and 2006 population of U.S. cities and
+#' This data contains the location, name, and 2020 population of U.S. cities and
 #' large towns.
 #'
 #' @name cities
@@ -55,8 +55,8 @@ NULL
 #' \describe{
 #' \item{\code{name}}{City name.}
 #' \item{\code{state}}{City state.}
-#' \item{\code{pop_2006}}{City population in 2006.}
-#' \item{\code{capital}}{TRUE if the city is a capital.}
+#' \item{\code{pop_2020}}{City population in 2020}
+#' \item{\code{GEOID}}{Census GEOID for the corresponding Census Designated Place.}
 #' \item{\code{geometry}}{The `sf` geometry column containing the geographic information.}
 #' }
 #'

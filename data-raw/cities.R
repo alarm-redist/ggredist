@@ -4,18 +4,29 @@ library(tigris)
 library(stringr)
 library(rmapshaper)
 
-raw <- as_tibble(maps::us.cities)
+x <- purrr::map_dfr(c(state.abb, 'DC'),
+                    function(st) {
+                      tidycensus::get_decennial('place', 'P2_001N', year = 2020, state = st, geometry = TRUE) %>%
+                        dplyr::mutate(geometry = st_centroid(geometry)) %>%
+                        dplyr::arrange(desc(value)) %>%
+                        dplyr::slice(1:40) %>%
+                        dplyr::mutate(state = st) %>%
+                        dplyr::select(-variable) %>%
+                        dplyr::rename(pop_2020 = value)
+                    })
 
-raw$geometry <- st_as_sf(data.frame(X=raw$long, Y=raw$lat), coords=c("X", "Y")) %>%
-  st_set_crs(4269) %>%
-  pull(geometry)
+x <- x %>%
+  dplyr::arrange(desc(pop_2020)) %>%
+  dplyr::slice(1:1000)
 
-cities <- transmute(raw,
-                 name = str_trim(str_remove(name, country.etc)),
-                 state = country.etc,
-                 pop_2006 = pop,
-                 capital = (capital == 2),
-                 geometry = geometry) %>%
-  st_as_sf()
+x <- x %>%
+  dplyr::select(
+    name = NAME, state, GEOID, pop_2020, geometry
+  )
+
+cities <- x %>%
+  dplyr::mutate(name = sapply(strsplit(x$name, ','), `[`, 1))
 
 usethis::use_data(cities, overwrite=TRUE, compress="xz")
+
+
