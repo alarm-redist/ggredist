@@ -58,12 +58,12 @@ StatCities <- ggplot2::ggproto(
     bbox = sf::st_bbox(geom_data)
 
     city_d = suppressWarnings(sf::st_crop(
-      sf::st_transform(cities[cities$pop_2006 >= min_pop, ], geom_crs),
+      sf::st_transform(cities[cities$pop_2020 >= min_pop, ], geom_crs),
       bbox
     ))
     out = data.frame(label = city_d$name,
                      shape = c(16, 8)[1 + city_d$capital],
-                     size = adjust * 0.01 * sqrt(city_d$pop_2006),
+                     size = adjust * 0.01 * sqrt(city_d$pop_2020),
                      geometry = city_d$geometry)
 
     # copied from StatSf <https://github.com/tidyverse/ggplot2/blob/main/R/stat-sf.R>
