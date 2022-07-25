@@ -142,7 +142,7 @@ StatInterstates <- ggplot2::ggproto(
     bbox = sf::st_bbox(geom_data)
 
     road_d = suppressWarnings(sf::st_crop(
-      sf::st_transform(roads, geom_crs),
+      sf::st_transform(interstates, geom_crs),
       bbox
     ))
     out = data.frame(geometry = road_d$geometry)
