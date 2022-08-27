@@ -30,4 +30,4 @@ scale_color_dra <- function(...) {
 #' @rdname scale_dra
 #' @concept colors
 #' @export
-scale_colour_dra = scale_color_dra
+scale_colour_dra <- scale_color_dra
