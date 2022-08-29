@@ -1,5 +1,5 @@
 Package: ggredist
-Title: Scales, Palettes, and Extensions of 'ggplot2' for Redistricting 
+Title: Scales, Geometries, and Extensions of 'ggplot2' for Election Mapping
 Version: 0.0.0.9000
 Authors@R: c(
     person("Cory", "McCartan", email = "cmccartan@g.harvard.edu", role = "aut"),
