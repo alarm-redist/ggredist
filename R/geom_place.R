@@ -76,19 +76,11 @@ StatPlaces <- ggplot2::ggproto(
     out$xmax <- max(bbox_trans$x)
     out$ymin <- min(bbox_trans$y)
     out$ymax <- max(bbox_trans$y)
-    print(out)
-
-    xy <- as.data.frame(sf::st_coordinates(sf::st_geometry(out)))
-    out$x <- xy$X
-    out$y <- xy$Y
 
     out
   },
-  default_aes = ggplot2::aes(
-    x = ggplot2::after_stat(x),
-    y = ggplot2::after_stat(y)
-  ),
-  required_aes = c('geometry')
+
+    required_aes = c('geometry')
 )
 
 #' @rdname StatPlaces
