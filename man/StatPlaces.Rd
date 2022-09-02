@@ -12,6 +12,7 @@ stat_places(
   geom = ggplot2::GeomSf,
   position = "identity",
   na.rm = FALSE,
+  state = NULL,
   show.legend = NA,
   inherit.aes = TRUE,
   ...
@@ -27,6 +28,8 @@ stat_places(
 \item{position}{Position adjustment}
 
 \item{na.rm}{if \code{TRUE}, will silently remove missing values from calculations}
+
+\item{state}{state to use. Guesses based on overlap if not progvided.}
 
 \item{show.legend}{Should this layer be included in the legends?}
 

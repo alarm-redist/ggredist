@@ -7,6 +7,7 @@
 #' @param geom The geometric object to use display the data
 #' @param position Position adjustment
 #' @param na.rm if `TRUE`, will silently remove missing values from calculations
+#' @param state state to use. Guesses based on overlap if not progvided.
 #' @param show.legend Should this layer be included in the legends?
 #' @param inherit.aes If `FALSE`, overrides the default aesthetics, rather than
 #'   combining with them.
@@ -51,8 +52,12 @@ StatPlaces <- ggplot2::ggproto(
 
     bbox <- sf::st_bbox(geom_data)
 
-    states_l <- small_states$STATEFP[which(lengths(sf::st_overlaps(sf::st_transform(small_states, geom_crs), geom_data)) > 0)]
-    state_d <- do.call('rbind', lapply(states_l, tinytiger::tt_places))
+    #if (is.null(params$state)) {
+      state <- small_states$STATEFP[which(lengths(sf::st_overlaps(sf::st_transform(small_states, geom_crs), geom_data)) > 0)]
+    #} else {
+    #  state <- params$state
+    #}
+    state_d <- do.call('rbind', lapply(state, tinytiger::tt_places))
 
     out <- suppressWarnings(sf::st_crop(
       sf::st_transform(state_d, geom_crs),
@@ -79,7 +84,11 @@ StatPlaces <- ggplot2::ggproto(
 
     out
   },
-
+  default_aes = ggplot2::aes(
+    fill = "#00000033",
+    color = NA,
+    size = 0
+  ),
     required_aes = c('geometry')
 )
 
@@ -87,11 +96,11 @@ StatPlaces <- ggplot2::ggproto(
 #' @concept geoms
 #' @export
 stat_places <- function(mapping = NULL, data = NULL, geom = ggplot2::GeomSf,
-                        position = 'identity', na.rm = FALSE,
+                        position = 'identity', na.rm = FALSE, state = NULL,
                         show.legend = NA, inherit.aes = TRUE, ...) {
   ggplot2::layer_sf(
     stat = StatPlaces, data = data, mapping = mapping, geom = geom,
     position = position, show.legend = show.legend, inherit.aes = inherit.aes,
-    params = list(na.rm = na.rm, ...)
+    params = list(na.rm = na.rm, state = state, ...)
   )
 }
