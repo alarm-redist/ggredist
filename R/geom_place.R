@@ -51,7 +51,7 @@ StatPlaces <- ggplot2::ggproto(
 
     bbox <- sf::st_bbox(geom_data)
 
-    states_l <- small_states$STATEFP[which(lengths(sf::st_overlaps(sf::st_transform(small_states, sf::st_crs(data)), data)) > 0)]
+    states_l <- small_states$STATEFP[which(lengths(sf::st_overlaps(sf::st_transform(small_states, geom_crs), geom_data)) > 0)]
     state_d <- do.call('rbind', lapply(states_l, tinytiger::tt_places))
 
     out <- suppressWarnings(sf::st_crop(
@@ -76,8 +76,9 @@ StatPlaces <- ggplot2::ggproto(
     out$xmax <- max(bbox_trans$x)
     out$ymin <- min(bbox_trans$y)
     out$ymax <- max(bbox_trans$y)
+    print(out)
 
-    xy <- as.data.frame(sf::st_coordinates(out$geometry))
+    xy <- as.data.frame(sf::st_coordinates(sf::st_geometry(out)))
     out$x <- xy$X
     out$y <- xy$Y
 
@@ -89,7 +90,6 @@ StatPlaces <- ggplot2::ggproto(
   ),
   required_aes = c('geometry')
 )
-
 
 #' @rdname StatPlaces
 #' @concept geoms
