@@ -42,7 +42,7 @@ StatPlaces <- ggplot2::ggproto(
   },
 
   # st_union by group
-  compute_panel = function(data, scales, coord) {
+  compute_panel = function(data, scales, coord, state = params$state) {
     if (!inherits(coord, 'CoordSf')) {
       stop('`stat_places()` can only be used with `coord_sf()`')
     }
@@ -52,11 +52,10 @@ StatPlaces <- ggplot2::ggproto(
 
     bbox <- sf::st_bbox(geom_data)
 
-    #if (is.null(params$state)) {
+    if (is.null(state)) {
       state <- small_states$STATEFP[which(lengths(sf::st_overlaps(sf::st_transform(small_states, geom_crs), geom_data)) > 0)]
-    #} else {
-    #  state <- params$state
-    #}
+    }
+
     state_d <- do.call('rbind', lapply(state, tinytiger::tt_places))
 
     out <- suppressWarnings(sf::st_crop(
