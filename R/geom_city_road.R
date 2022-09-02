@@ -49,7 +49,7 @@ StatCities <- ggplot2::ggproto(
   # st_union by group
   compute_panel = function(data, scales, coord, min_pop = 100e3, adjust = 1.0) {
     if (!inherits(coord, "CoordSf")) {
-      stop("`stat_districts()` can only be used with `coord_sf()`")
+      stop("`stat_cities()` can only be used with `coord_sf()`")
     }
 
     geom_data = data[[geom_column(data)]]
