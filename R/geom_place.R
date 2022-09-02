@@ -21,8 +21,7 @@
 #'
 #' ggplot(oregon, aes(group = cd_2020)) +
 #'   geom_district() +
-#'   stat_places() +
-#'   scale_fill_penn82() +
+#"   stat_places(state = 'OR') +
 #'   theme_map()
 #'
 #' @concept geoms

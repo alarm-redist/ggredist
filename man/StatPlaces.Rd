@@ -50,8 +50,6 @@ data(oregon)
 
 ggplot(oregon, aes(group = cd_2020)) +
   geom_district() +
-  stat_places() +
-  scale_fill_penn82() +
   theme_map()
 
 }
