@@ -127,7 +127,6 @@ GeomPlaces <- ggplot2::ggproto(
 #' @export
 geom_places <- function(mapping = NULL, data = NULL,
                         position = "identity", na.rm = FALSE,
-                        fill = "#00000033", color = NA, size = 0,
                         state = NULL,
                         show.legend = NA, inherit.aes = TRUE, ...) {
   c(
@@ -135,9 +134,6 @@ geom_places <- function(mapping = NULL, data = NULL,
       stat = StatPlaces, data = data, mapping = mapping, geom = GeomPlaces,
       position = position, show.legend = show.legend, inherit.aes = inherit.aes,
       params = list(na.rm = na.rm,
-                    fill = fill,
-                    color = color,
-                    size = size,
                     state = state,
                     ...)
     ),
