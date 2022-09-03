@@ -16,6 +16,7 @@ geom_places(
   fill = "#00000033",
   color = NA,
   size = 0,
+  state = NULL,
   show.legend = NA,
   inherit.aes = TRUE,
   ...
@@ -42,6 +43,8 @@ stat_places(
 
 \item{na.rm}{if \code{TRUE}, will silently remove missing values from calculations}
 
+\item{state}{state to use. Guesses based on overlap if not progvided.}
+
 \item{show.legend}{Should this layer be included in the legends?}
 
 \item{inherit.aes}{If \code{FALSE}, overrides the default aesthetics, rather than
@@ -50,8 +53,6 @@ combining with them.}
 \item{...}{Passed onto the underlying geoms.}
 
 \item{geom}{The geometric object to use display the data}
-
-\item{state}{state to use. Guesses based on overlap if not progvided.}
 }
 \value{
 a \code{ggproto} object

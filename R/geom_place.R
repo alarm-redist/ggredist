@@ -128,6 +128,7 @@ GeomPlaces <- ggplot2::ggproto(
 geom_places <- function(mapping = NULL, data = NULL,
                         position = "identity", na.rm = FALSE,
                         fill = "#00000033", color = NA, size = 0,
+                        state = NULL,
                         show.legend = NA, inherit.aes = TRUE, ...) {
   c(
     ggplot2::layer_sf(
@@ -137,6 +138,7 @@ geom_places <- function(mapping = NULL, data = NULL,
                     fill = fill,
                     color = color,
                     size = size,
+                    state = state,
                     ...)
     ),
     ggplot2::coord_sf(default = TRUE)
