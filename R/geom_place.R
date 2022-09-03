@@ -102,3 +102,43 @@ stat_places <- function(mapping = NULL, data = NULL, geom = ggplot2::GeomSf,
     params = list(na.rm = na.rm, state = state, ...)
   )
 }
+
+#' @export
+#' @rdname StatPlaces
+#' @usage NULL
+#' @format NULL
+GeomPlaces <- ggplot2::ggproto(
+  "GeomPlaces", ggplot2::GeomSf,
+  default_aes = ggplot2::aes(
+    colour = NA,
+    fill = "#00000033",
+    size = 0,
+    #linewidth = NULL,
+    linetype = 1,
+    alpha = NA,
+    stroke = 0.8
+  ),
+  required_aes = c("geometry")
+)
+
+#' @rdname StatPlaces
+#' @concept geoms
+#' @order 1
+#' @export
+geom_places <- function(mapping = NULL, data = NULL,
+                        position = "identity", na.rm = FALSE,
+                        fill = "#00000033", color = NA, size = 0,
+                        show.legend = NA, inherit.aes = TRUE, ...) {
+  c(
+    ggplot2::layer_sf(
+      stat = StatPlaces, data = data, mapping = mapping, geom = GeomPlaces,
+      position = position, show.legend = show.legend, inherit.aes = inherit.aes,
+      params = list(na.rm = na.rm,
+                    fill = fill,
+                    color = color,
+                    size = size,
+                    ...)
+    ),
+    ggplot2::coord_sf(default = TRUE)
+  )
+}
