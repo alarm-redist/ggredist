@@ -64,6 +64,9 @@ data(oregon)
 ggplot(oregon, aes(group = cd_2020)) +
   geom_district() +
   theme_map()
+ggplot(oregon, aes(group = cd_2020)) +
+  geom_district() +
+  theme_map()
 
 }
 \concept{geoms}
