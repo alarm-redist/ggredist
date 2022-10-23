@@ -40,7 +40,7 @@ stat_places(
 
 \item{na.rm}{if \code{TRUE}, will silently remove missing values from calculations}
 
-\item{state}{state to use. Guesses based on overlap if not progvided.}
+\item{state}{state to use. Guesses based on overlap if not provided.}
 
 \item{show.legend}{Should this layer be included in the legends?}
 

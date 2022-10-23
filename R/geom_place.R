@@ -7,7 +7,7 @@
 #' @param geom The geometric object to use display the data
 #' @param position Position adjustment
 #' @param na.rm if `TRUE`, will silently remove missing values from calculations
-#' @param state state to use. Guesses based on overlap if not progvided.
+#' @param state state to use. Guesses based on overlap if not provided.
 #' @param show.legend Should this layer be included in the legends?
 #' @param inherit.aes If `FALSE`, overrides the default aesthetics, rather than
 #'   combining with them.
