@@ -1,13 +1,14 @@
 Package: ggredist
 Title: Scales, Geometries, and Extensions of 'ggplot2' for Election Mapping
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
     person("Cory", "McCartan", email = "cmccartan@g.harvard.edu", role = "aut"),
     person("Christopher T.", "Kenny", email = "christopherkenny@fas.harvard.edu", 
     role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9386-6860")))
-Description: Provides `ggplot2` extensions for political mapmaking, including
-    new geometries, easy label generation and placement, automatic map coloring,
-    and map scales, palettes, and themes.
+Description: Provides `ggplot2` extensions for political mapmaking. Implements
+    new geometries for groups of simple feature geometries. Adds palettes and sclaes 
+    for red to blue color mapping and for discrete maps. Implements tools for easy 
+    label generation and placement, automatic map coloring, and themes.
 Depends: 
     R (>= 2.10)
 Imports: 

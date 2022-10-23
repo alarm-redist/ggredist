@@ -9,7 +9,13 @@
 #' @concept theme
 #'
 #' @examples
-#' # TODO
+#' library(ggplot2)
+#' data(oregon)
+#'
+#' ggplot(oregon, aes(group = county)) +
+#'     geom_district() +
+#'     scale_fill_penn82() +
+#'     theme_map()
 #'
 theme_map <- function(...) {
   ggplot2::theme_void(base_family = 'Times', base_size = 12) +

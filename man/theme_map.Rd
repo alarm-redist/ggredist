@@ -16,7 +16,13 @@ ggplot2 theme
 Theme for maps which uses the \code{'Times'} family and has a transparent background.
 }
 \examples{
-# TODO
+library(ggplot2)
+data(oregon)
+
+ggplot(oregon, aes(group = county)) +
+    geom_district() +
+    scale_fill_penn82() +
+    theme_map()
 
 }
 \concept{theme}
