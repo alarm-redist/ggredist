@@ -30,7 +30,7 @@ ggredist = list(
                        class="palette"),
   dra = structure(c('#7070ff', '#70B870', '#BE70BE', '#FF7070', '#FFE970',
                     '#70B8B8', '#E6AB80', '#ABA2E3', '#70FFFF', '#FF7BC2',
-                    '#B7FF70', '#A8C4F5', '#F3C4B4'), class="palette"),
+                    '#B7FF70', '#A8C4F5', '#F3C4B4', '#BEBE7E'), class="palette"),
   penn82 = structure(c('#EDEF3F', '#FED09E', '#A7825A', '#FFF8B7',
                        '#E2A414', '#ECD166'), class="palette"),
   randmcnally = structure(c("#f4c450", "#e79274", "#d3a7ae", "#fcf092",
