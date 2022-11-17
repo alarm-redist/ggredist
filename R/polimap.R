@@ -2,6 +2,8 @@
 #'
 #' @param ... Arguments passed on to [ggplot2::discrete_scale()]
 #'
+#' @return ggplot scale function
+#'
 #' @examples
 #' library(ggplot2)
 #' data(oregon)

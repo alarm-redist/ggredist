@@ -27,26 +27,17 @@ ggplot(oregon, aes(group=cd_2020)) +
   # can then highlight towns and cities
   geom_places(state = 'OR') + 
   # we can overlay county boundaries and labels
-  geom_district(aes(group=county), linewidth=0.4, linetype="dashed", fill=NA) +
+  geom_district(aes(group=county), linewidth=0.2, linetype="dashed", fill=NA) +
   geom_district_text(aes(group=county, label=toupper(county)),
                      size=2.2, check_overlap=TRUE) +
   scale_fill_party_b(limits=c(0.4, 0.6)) +
   theme_map()
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
-#> found in Windows font database
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
-#> found in Windows font database
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
-See more in [the reference](/ggredist/reference/).
+See more in [the
+reference](https://alarm-redist.org/ggredist/reference/index.html).
 
 ## Installation
 

@@ -100,6 +100,9 @@ scale_colour_party_b(
 \item{nice.breaks}{If \code{TRUE}, attempt to place breaks at nice values instead
 of exactly evenly spaced between the limits.}
 }
+\value{
+ggplot scale function
+}
 \description{
 Partisan scales for \code{ggplot2}
 }

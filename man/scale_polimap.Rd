@@ -24,6 +24,9 @@ scale_colour_natgeo(...)
 \arguments{
 \item{...}{Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}}}
 }
+\value{
+ggplot scale function
+}
 \description{
 Rand-McNally and National Geographic Color Scales for \code{ggplot2}
 }

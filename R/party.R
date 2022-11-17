@@ -10,6 +10,8 @@
 #'   of exactly evenly spaced between the limits.
 #' @param ... Additional arguments to `ggplot::scale_*` functions
 #'
+#' @return ggplot scale function
+#'
 #' @examples
 #' library(ggplot2)
 #' data(oregon)

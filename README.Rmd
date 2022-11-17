@@ -45,7 +45,7 @@ ggplot(oregon, aes(group=cd_2020)) +
   theme_map()
 ```
 
-See more in [the reference](/ggredist/reference/).
+See more in [the reference](https://alarm-redist.org/ggredist/reference/index.html).
 
 
 ## Installation

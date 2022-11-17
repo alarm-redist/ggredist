@@ -4,7 +4,8 @@
 #'
 #' @param ... additional arguments to `ggplot::scale_*` functions
 #'
-#' @md
+#' @return ggplot scale function
+#'
 #' @examples
 #' scale_fill_538()
 #' scale_color_538()

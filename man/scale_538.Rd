@@ -12,6 +12,9 @@ scale_color_538(...)
 \arguments{
 \item{...}{additional arguments to \verb{ggplot::scale_*} functions}
 }
+\value{
+ggplot scale function
+}
 \description{
 FiveThirtyEight scales for \code{ggplot2}
 }
