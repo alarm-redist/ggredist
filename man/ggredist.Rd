@@ -24,13 +24,13 @@ Geographic political maps
 }
 }
 \examples{
-plot(ggredist$partisan)
-plot(ggredist$dra)
-plot(ggredist$penn82)
-plot(ggredist$randmcnally)
-plot(ggredist$natgeo)
-plot(ggredist$coast)
-plot(ggredist$larch)
+scales::show_col(ggredist$partisan)
+scales::show_col(ggredist$dra)
+scales::show_col(ggredist$penn82)
+scales::show_col(ggredist$randmcnally)
+scales::show_col(ggredist$natgeo)
+scales::show_col(ggredist$coast)
+scales::show_col(ggredist$larch)
 
 }
 \concept{colors}
