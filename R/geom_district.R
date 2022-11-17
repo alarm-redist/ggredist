@@ -178,7 +178,7 @@ StatDistrict <- ggplot2::ggproto(
   },
 
   optional_aes = c("fill", "denom"),
-
+  dropped_aes = c('denom'),
   required_aes = c("geometry")
 )
 
