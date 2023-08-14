@@ -8,6 +8,14 @@
 #' - **randmcnally** and **natgeo**, colors taken from Rand-McNally and National
 #' Geographic political maps
 #' - **coast** and **larch**, inspired by natural scenery
+#' - **wiki_dem_pres**: Wikipedia Presidential Democratic palette
+#' - **wiki_rep_pres**: Wikipedia Presidential Republican palette
+#' - **wiki_dem**: Wikipedia downballot Democratic palette
+#' - **wiki_rep**: Wikipedia downballot Republican palette
+#' - **wiki_proposal**: Wikipedia proposal support palette
+#'
+#' For details on Wikipedia-based colors, see
+#' <https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Elections_and_Referendums/USA_legend_colors>.
 #'
 #' @format list of character vectors of type `palette` (which supports a
 #'   `plot()` generic for visualization)
@@ -42,6 +50,21 @@ ggredist = list(
   larch = structure(c("#D0A75F", "#626B5D", "#8C8F9E",
                       "#858753", "#A4BADA", "#CDB7AA"), class = c("palette", 'character')),
   fivethirtyeight = structure(c('#5768AC', '#A1A9ED', '#EAE3EB',
-                                '#FF998A', '#FA5A50'), class = c("palette", 'character'))
+                                '#FF998A', '#FA5A50'), class = c("palette", 'character')),
+  wiki_dem_pres = structure(c('#E1EFFF', '#D3E7FF', '#B9D7FF', '#86B6F2', '#4389E3',
+                              '#1666CB', '#0645B4', '#002B84'),
+                            class = c("palette", 'character')),
+  wiki_rep_pres = structure(c('#FFDFE1', '#FFCCD0', '#F2B3BE', '#E27F90', '#CC2F4A',
+                              '#D40000', '#AA0000', '#800000'),
+                            class = c("palette", 'character')),
+  wiki_dem = structure(c('#EBF2FF', '#DFEEFF', '#BDD3FF', '#A5B0FF', '#7996E2',
+                         '#6674DE', '#584CDE', '#3933E5', '#0D0596'),
+                       class = c("palette", 'character')),
+  wiki_dem = structure(c('#FFF0F5', '#FFE0EA', '#FFC8CD', '#FFB2B2', '#E27F7F',
+                         '#D75D5D', '#D72F30', '#C21B18', '#A80000'),
+                       class = c("palette", 'character')),
+  wiki_proposal = structure(c('#2B2457', '#28497C', '#47729E', '#7D9CBB', '#B6C8D9',
+                              '#EBEEED', '#DEDEBD', '#BCBC83', '#8B8B54', '#5D5D2D', '#32320C'),
+                            class = c("palette", 'character'))
 )
 
