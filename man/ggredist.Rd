@@ -21,7 +21,16 @@ Pennsylvania congressional district map
 \item \strong{randmcnally} and \strong{natgeo}, colors taken from Rand-McNally and National
 Geographic political maps
 \item \strong{coast} and \strong{larch}, inspired by natural scenery
+\item \strong{wiki_dem_pres}: Wikipedia Presidential Democratic palette
+\item \strong{wiki_rep_pres}: Wikipedia Presidential Republican palette
+\item \strong{wiki_dem}: Wikipedia downballot Democratic palette
+\item \strong{wiki_rep}: Wikipedia downballot Republican palette
+\item \strong{wiki_proposal}: Wikipedia proposal support palette
 }
+}
+\details{
+For details on Wikipedia-based colors, see
+\url{https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Elections_and_Referendums/USA_legend_colors}.
 }
 \examples{
 plot(ggredist$partisan)
