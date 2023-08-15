@@ -7,8 +7,13 @@
 #' @return ggplot scale function
 #'
 #' @examples
-#' scale_fill_538()
-#' scale_color_538()
+#' library(ggplot2)
+#' data(oregon)
+#'
+#' ggplot(oregon, aes(fill = ndv / (ndv + nrv))) +
+#'     geom_sf(size = 0) +
+#'     scale_fill_538(name = '') +
+#'     theme_map()
 #' @concept colors
 #' @export
 scale_fill_538 <- function(...) {

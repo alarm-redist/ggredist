@@ -37,13 +37,12 @@ ggplot scale function
 Wikipedia Style Election Map scales for \code{ggplot2}
 }
 \examples{
-scale_fill_wiki_rep()
-scale_fill_wiki_rep()
-scale_fill_wiki_dem()
-scale_fill_wiki_dem()
-scale_fill_wiki_rep_pres()
-scale_fill_wiki_rep_pres()
-scale_fill_wiki_dem_pres()
-scale_fill_wiki_dem_pres()
+library(ggplot2)
+data(oregon)
+
+ggplot(oregon, aes(fill = ndv / (ndv + nrv))) +
+    geom_sf(size = 0) +
+    scale_fill_wiki_dem(name = 'Dem Share') +
+    theme_map()
 }
 \concept{colors}
