@@ -60,7 +60,7 @@ ggredist = list(
   wiki_dem = structure(c('#EBF2FF', '#DFEEFF', '#BDD3FF', '#A5B0FF', '#7996E2',
                          '#6674DE', '#584CDE', '#3933E5', '#0D0596'),
                        class = c("palette", 'character')),
-  wiki_dem = structure(c('#FFF0F5', '#FFE0EA', '#FFC8CD', '#FFB2B2', '#E27F7F',
+  wiki_rep = structure(c('#FFF0F5', '#FFE0EA', '#FFC8CD', '#FFB2B2', '#E27F7F',
                          '#D75D5D', '#D72F30', '#C21B18', '#A80000'),
                        class = c("palette", 'character')),
   wiki_proposal = structure(c('#2B2457', '#28497C', '#47729E', '#7D9CBB', '#B6C8D9',
