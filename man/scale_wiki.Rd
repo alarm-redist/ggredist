@@ -9,7 +9,7 @@
 \alias{scale_color_wiki_rep_pres}
 \alias{scale_fill_wiki_dem_pres}
 \alias{scale_color_wiki_dem_pres}
-\title{Wikipedia Election Map scales for \code{ggplot2}}
+\title{Wikipedia Style Election Map scales for \code{ggplot2}}
 \usage{
 scale_fill_wiki_rep(...)
 
@@ -34,7 +34,7 @@ scale_color_wiki_dem_pres(...)
 ggplot scale function
 }
 \description{
-Wikipedia Election Map scales for \code{ggplot2}
+Wikipedia Style Election Map scales for \code{ggplot2}
 }
 \examples{
 scale_fill_wiki_rep()

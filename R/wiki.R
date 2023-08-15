@@ -1,4 +1,4 @@
-#' Wikipedia Election Map scales for `ggplot2`
+#' Wikipedia Style Election Map scales for `ggplot2`
 #'
 #' @rdname scale_wiki
 #'
