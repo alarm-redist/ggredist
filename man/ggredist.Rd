@@ -21,11 +21,14 @@ Pennsylvania congressional district map
 \item \strong{randmcnally} and \strong{natgeo}, colors taken from Rand-McNally and National
 Geographic political maps
 \item \strong{coast} and \strong{larch}, inspired by natural scenery
+\item \strong{fivethirtyeight}, FiveThirtyEight-inspired color palette
 \item \strong{wiki_dem_pres}: Wikipedia Presidential Democratic palette
 \item \strong{wiki_rep_pres}: Wikipedia Presidential Republican palette
 \item \strong{wiki_dem}: Wikipedia downballot Democratic palette
 \item \strong{wiki_rep}: Wikipedia downballot Republican palette
 \item \strong{wiki_proposal}: Wikipedia proposal support palette
+\item \strong{jacksonville}, Jacksonville, FL inspired color palette
+\item \strong{florida}, Florida inspired color palette
 }
 }
 \details{
@@ -40,6 +43,14 @@ plot(ggredist$randmcnally)
 plot(ggredist$natgeo)
 plot(ggredist$coast)
 plot(ggredist$larch)
+plot(ggredist$fivethirtyeight)
+plot(ggredist$wiki_dem_pres)
+plot(ggredist$wiki_rep_pres)
+plot(ggredist$wiki_dem)
+plot(ggredist$wiki_rep)
+plot(ggredist$wiki_proposal)
+plot(ggredist$jacksonville)
+plot(ggredist$florida)
 
 }
 \concept{colors}

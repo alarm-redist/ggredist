@@ -1,6 +1,7 @@
 # ggredist 0.0.2
 
 * Adds colors and scales to match Wikipedia's typical election mapping colors.
+* Adds discrete palettes based on palettes from Jacksonville, FL and Florida statewide.
 
 # ggredist 0.0.1
 

@@ -8,11 +8,14 @@
 #' - **randmcnally** and **natgeo**, colors taken from Rand-McNally and National
 #' Geographic political maps
 #' - **coast** and **larch**, inspired by natural scenery
+#' - **fivethirtyeight**, FiveThirtyEight-inspired color palette
 #' - **wiki_dem_pres**: Wikipedia Presidential Democratic palette
 #' - **wiki_rep_pres**: Wikipedia Presidential Republican palette
 #' - **wiki_dem**: Wikipedia downballot Democratic palette
 #' - **wiki_rep**: Wikipedia downballot Republican palette
 #' - **wiki_proposal**: Wikipedia proposal support palette
+#' - **jacksonville**, Jacksonville, FL inspired color palette
+#' - **florida**, Florida inspired color palette
 #'
 #' For details on Wikipedia-based colors, see
 #' <https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Elections_and_Referendums/USA_legend_colors>.
@@ -28,6 +31,14 @@
 #' plot(ggredist$natgeo)
 #' plot(ggredist$coast)
 #' plot(ggredist$larch)
+#' plot(ggredist$fivethirtyeight)
+#' plot(ggredist$wiki_dem_pres)
+#' plot(ggredist$wiki_rep_pres)
+#' plot(ggredist$wiki_dem)
+#' plot(ggredist$wiki_rep)
+#' plot(ggredist$wiki_proposal)
+#' plot(ggredist$jacksonville)
+#' plot(ggredist$florida)
 #'
 #' @concept colors
 #' @export
@@ -65,6 +76,17 @@ ggredist = list(
                        class = c("palette", 'character')),
   wiki_proposal = structure(c('#2B2457', '#28497C', '#47729E', '#7D9CBB', '#B6C8D9',
                               '#EBEEED', '#DEDEBD', '#BCBC83', '#8B8B54', '#5D5D2D', '#32320C'),
-                            class = c("palette", 'character'))
+                            class = c("palette", 'character')),
+  jacksonville = structure(c('#609CA7', '#E4874F', '#6FF87F', '#B770E6', '#5052DD',
+                             '#92B340', '#93EDCA', '#83516A', '#85A6F7', '#448047',
+                             '#3F3E80', '#CA4D6D', '#DCE592', '#918259'),
+                           class = c('palette', 'character')),
+  florida = structure(c('#F7FDB1', '#D1FDBC', '#FEBBD5', '#C6FEE0', '#C5CAFF',
+                        '#F0C2FD', '#FEC6C9', '#B4FDBF', '#FDF4C4', '#BAB5FD',
+                        '#FFB5B3', '#BDF8FE', '#FFBEF3', '#B6FDCF', '#FDF1D5',
+                        '#C7D8FE', '#FED5E2', '#E4B3FD', '#E0FDD6', '#FDE3B1',
+                        '#FDCFBB', '#DEC8FE', '#D7EFFF', '#DFFDF2', '#FED5FC',
+                        '#B5FFF1', '#B4E5FE', '#EFFDC6'),
+                      class = c('palette', 'character'))
 )
 
