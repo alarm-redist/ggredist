@@ -16,6 +16,7 @@
 #' - **wiki_proposal**: Wikipedia proposal support palette
 #' - **jacksonville**, Jacksonville, FL inspired color palette
 #' - **florida**, Florida inspired color palette
+#' - **washington**, Washington Redistricting Commission inspired color palette
 #'
 #' For details on Wikipedia-based colors, see
 #' <https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Elections_and_Referendums/USA_legend_colors>.
@@ -39,6 +40,7 @@
 #' plot(ggredist$wiki_proposal)
 #' plot(ggredist$jacksonville)
 #' plot(ggredist$florida)
+#' plot(ggredist$washington)
 #'
 #' @concept colors
 #' @export
@@ -87,6 +89,10 @@ ggredist = list(
                         '#C7D8FE', '#FED5E2', '#E4B3FD', '#E0FDD6', '#FDE3B1',
                         '#FDCFBB', '#DEC8FE', '#D7EFFF', '#DFFDF2', '#FED5FC',
                         '#B5FFF1', '#B4E5FE', '#EFFDC6'),
-                      class = c('palette', 'character'))
+                      class = c('palette', 'character')),
+  washington = structure(c('#993A5B', '#1E5769', '#D98B79', '#D9CC46', '#2AA99C',
+                           '#F1C1B8', '#533742', '#ABD2C5', '#976C81', '#239C78',
+                           '#A36D02', '#2A3944'),
+                         class = c('palette', 'character'))
 )
 

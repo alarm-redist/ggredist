@@ -29,6 +29,7 @@ Geographic political maps
 \item \strong{wiki_proposal}: Wikipedia proposal support palette
 \item \strong{jacksonville}, Jacksonville, FL inspired color palette
 \item \strong{florida}, Florida inspired color palette
+\item \strong{washington}, Washington Redistricting Commission inspired color palette
 }
 }
 \details{
@@ -51,6 +52,7 @@ plot(ggredist$wiki_rep)
 plot(ggredist$wiki_proposal)
 plot(ggredist$jacksonville)
 plot(ggredist$florida)
+plot(ggredist$washington)
 
 }
 \concept{colors}
