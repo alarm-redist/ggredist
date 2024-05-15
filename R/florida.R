@@ -23,7 +23,7 @@
 #' @export
 scale_fill_jacksonville <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'jacksonville',
-                          palette = rot_pal(ggredist$jacksonville), ...)
+                          palette = palette::palette_function(ggredist$jacksonville), ...)
 }
 
 #' @rdname scale_florida
@@ -31,7 +31,7 @@ scale_fill_jacksonville <- function(...) {
 #' @export
 scale_color_jacksonville <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'jacksonville',
-                          palette = rot_pal(ggredist$jacksonville), ...)
+                          palette = palette::palette_function(ggredist$jacksonville), ...)
 }
 #' @rdname scale_florida
 #' @concept colors
@@ -44,7 +44,7 @@ scale_colour_jacksonville = scale_color_jacksonville
 #' @export
 scale_fill_florida <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'florida',
-                          palette = rot_pal(ggredist$florida), ...)
+                          palette = palette::palette_function(ggredist$florida), ...)
 }
 
 #' @rdname scale_florida
@@ -52,7 +52,7 @@ scale_fill_florida <- function(...) {
 #' @export
 scale_color_florida <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'florida',
-                          palette = rot_pal(ggredist$florida), ...)
+                          palette = palette::palette_function(ggredist$florida), ...)
 }
 #' @rdname scale_florida
 #' @concept colors

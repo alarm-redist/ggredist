@@ -5,8 +5,8 @@
 \alias{ggredist}
 \title{Redistricting Color Palettes}
 \format{
-list of character vectors of type \code{palette} (which supports a
-\code{plot()} generic for visualization)
+list of character vectors of type \link[palette:palette]{palette::palette} (which supports a
+\code{plot()}, \code{print()}, and \code{pillar} generics for visualization)
 }
 \usage{
 ggredist
