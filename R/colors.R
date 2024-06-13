@@ -17,6 +17,7 @@
 #' - **jacksonville**, Jacksonville, FL inspired color palette
 #' - **florida**, Florida inspired color palette
 #' - **washington**, Washington Redistricting Commission inspired color palette
+#' - **alaska**, Alaska inspired color palette
 #'
 #' For details on Wikipedia-based colors, see
 #' <https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Elections_and_Referendums/USA_legend_colors>.
@@ -41,6 +42,7 @@
 #' plot(ggredist$jacksonville)
 #' plot(ggredist$florida)
 #' plot(ggredist$washington)
+#' plot(ggredist$alaska)
 #'
 #' @concept colors
 #' @export
@@ -84,6 +86,11 @@ ggredist = list(
                         '#B5FFF1', '#B4E5FE', '#EFFDC6')),
   washington = palette::palette(c('#993A5B', '#1E5769', '#D98B79', '#D9CC46', '#2AA99C',
                            '#F1C1B8', '#533742', '#ABD2C5', '#976C81', '#239C78',
-                           '#A36D02', '#2A3944'))
+                           '#A36D02', '#2A3944')),
+  alaska = palette::palette(c("#8FAD6A", "#A66A8F", "#82BBB4", "#7383BA",
+                              "#C6A46B", "#C4DC94", "#6691AD", "#A87C78",
+                              "#C8867A", "#4DD7FF", "#A17CB8", "#BF6884",
+                              "#A89264", "#BB6FC8", "#ADBA83"
+  ))
 )
 

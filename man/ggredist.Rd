@@ -30,6 +30,7 @@ Geographic political maps
 \item \strong{jacksonville}, Jacksonville, FL inspired color palette
 \item \strong{florida}, Florida inspired color palette
 \item \strong{washington}, Washington Redistricting Commission inspired color palette
+\item \strong{alaska}, Alaska inspired color palette
 }
 }
 \details{
@@ -53,6 +54,7 @@ plot(ggredist$wiki_proposal)
 plot(ggredist$jacksonville)
 plot(ggredist$florida)
 plot(ggredist$washington)
+plot(ggredist$alaska)
 
 }
 \concept{colors}

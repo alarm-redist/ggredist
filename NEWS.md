@@ -1,3 +1,8 @@
+# ggredist 0.0.03
+
+* Adds new discrete color palettes from Washingtonian and Alaskan redistricting proceses.
+* Replaces internal palette class with the palette class from the [palette R package](https://christophertkenny.com/palette/).
+
 # ggredist 0.0.2
 
 * Adds colors and scales to match Wikipedia's typical election mapping colors.
