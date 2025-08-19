@@ -90,6 +90,10 @@ ggredist = list(
                               "#C6A46B", "#C4DC94", "#6691AD", "#A87C78",
                               "#C8867A", "#4DD7FF", "#A17CB8", "#BF6884",
                               "#A89264", "#BB6FC8", "#ADBA83"
+  )),
+  texas = palette::palette(c('#cbfac2', '#f2b4ad', '#fad9fd', '#c1effb',
+                             '#fffed0', '#fad9ab', '#e1e1e1'
+
   ))
 )
 
