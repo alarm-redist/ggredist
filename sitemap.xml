@@ -1,87 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/404.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/StatCityRoad.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/StatDistrict.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/StatDistrictCoordinates.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/StatPlaces.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/cities.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/ggredist.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/interstates.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/label_party.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/map_coloring.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/oregon.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_538.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_alaska.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_dra.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_florida.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_nature.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_party.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_penn82.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_polimap.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_washington.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/scale_wiki.html</loc>
-  </url>
-  <url>
-    <loc>https://alarm-redist.github.io/ggredist/reference/theme_map.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://alarm-redist.github.io/ggredist/404.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/LICENSE-text.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/LICENSE.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/authors.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/index.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/news/index.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/StatCityRoad.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/StatDistrict.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/StatDistrictCoordinates.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/StatPlaces.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/cities.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/ggredist.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/index.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/interstates.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/label_party.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/map_coloring.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/oregon.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_538.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_alaska.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_dra.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_florida.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_nature.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_party.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_penn82.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_polimap.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_washington.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/scale_wiki.html</loc></url>
+<url><loc>https://alarm-redist.github.io/ggredist/reference/theme_map.html</loc></url>
 </urlset>
+
