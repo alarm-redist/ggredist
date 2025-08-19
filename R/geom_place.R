@@ -2,7 +2,7 @@
 #'
 #' Identifies relevant census places and plots them.
 #'
-#' @param mapping Set of aesthetic mappings created by [aes()]
+#' @param mapping Set of aesthetic mappings created by [ggplot2::aes()]
 #' @param data The data to be displayed in this layer
 #' @param geom The geometric object to use display the data
 #' @param position Position adjustment
