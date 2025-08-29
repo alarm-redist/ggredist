@@ -8,7 +8,7 @@
 [![R-CMD-check](https://github.com/alarm-redist/ggredist/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/alarm-redist/ggredist/actions/workflows/R-CMD-check.yaml)
 [![](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![r-universe status
-badge](https://alarm-redist.r-universe.dev/badges/ggredist)](https://alarm-redist.r-universe.dev/ui#package:ggredist)
+badge](https://alarm-redist.r-universe.dev/badges/ggredist)](https://alarm-redist.r-universe.dev/ggredist)
 <!-- badges: end -->
 
 `ggredist` provides `ggplot2` extensions for political mapmaking,
@@ -35,6 +35,16 @@ ggplot(oregon, aes(group=cd_2020)) +
                      size=2.2, check_overlap=TRUE) +
   scale_fill_party_b(limits=c(0.4, 0.6)) +
   theme_map()
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> not found in Windows font database
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> not found in Windows font database
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family not found in Windows font database
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family not found in Windows font database
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family not found in Windows font database
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
