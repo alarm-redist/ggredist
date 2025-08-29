@@ -1,9 +1,9 @@
 Package: ggredist
 Title: Scales, Geometries, and Extensions of 'ggplot2' for Election Mapping
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(
     person("Cory", "McCartan", email = "mccartan@psu.edu", role = "aut"),
-    person("Christopher T.", "Kenny", email = "christopherkenny@fas.harvard.edu", 
+    person("Christopher T.", "Kenny", email = "ctkenny@proton.me", 
     role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9386-6860")))
 Description: Provides 'ggplot2' extensions for political map making. Implements
     new geometries for groups of simple feature geometries. Adds palettes and scales 
