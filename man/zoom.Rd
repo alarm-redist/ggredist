@@ -15,6 +15,8 @@ view_box(subset, data)
 Tidy-evaluted in the context of \code{data}.}
 
 \item{data}{An \code{sf} data frame.}
+
+\item{...}{Additional arguments passed to \code{coord_sf()}.}
 }
 \value{
 \code{crop_to()} returns a \code{coord_sf()} object to be added to a ggplot.
