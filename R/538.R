@@ -18,8 +18,13 @@
 #' @export
 scale_fill_538 <- function(...) {
   ggplot2::binned_scale('fill', '538',
-                        palette = function(x) ggredist$fivethirtyeight,
-                        breaks = c(0, 0.35, 0.45, 0.55, 0.65, 1),
+                        palette = function(x) {
+                            if (length(x) > 5) {
+                                stop("`scale_fill_538()` supports up to 5 bins")
+                            }
+                            ggredist$fivethirtyeight[seq_along(x)]
+                        },
+                        breaks = c(0.35, 0.45, 0.55, 0.65),
                         limits = c(.25, .75),
                         oob = scales::squish,
                         guide = 'colourbar',
@@ -32,8 +37,13 @@ scale_fill_538 <- function(...) {
 #' @export
 scale_color_538 <- function(...) {
   ggplot2::binned_scale('color', '538',
-                        palette = function(x) ggredist$fivethirtyeight,
-                        breaks = c(0, 0.35, 0.45, 0.55, 0.65, 1),
+                        palette = function(x) {
+                            if (length(x) > 5) {
+                                stop("`scale_fill_538()` supports up to 5 bins")
+                            }
+                            ggredist$fivethirtyeight[seq_along(x)]
+                        },
+                        breaks = c(0.35, 0.45, 0.55, 0.65),
                         limits = c(.25, .75),
                         oob = scales::squish,
                         guide = 'colourbar',
