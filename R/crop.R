@@ -6,6 +6,7 @@
 #' @param subset An indexing expression to select rows from `data`.
 #'   Tidy-evaluted in the context of `data`.
 #' @param data An `sf` data frame.
+#' @param ... Additional arguments passed to `coord_sf()`.
 #'
 #' @returns `crop_to()` returns a `coord_sf()` object to be added to a ggplot.
 #'   `view_box()` returns a `geom_rect()` layer to be added to a ggplot.
