@@ -5,8 +5,8 @@
 \alias{ggredist}
 \title{Redistricting Color Palettes}
 \format{
-list of character vectors of type \code{palette} (which supports a
-\code{plot()} generic for visualization)
+list of character vectors of type \link[palette:palette]{palette::palette} (which supports a
+\code{plot()}, \code{print()}, and \code{pillar} generics for visualization)
 }
 \usage{
 ggredist
@@ -30,6 +30,7 @@ Geographic political maps
 \item \strong{jacksonville}, Jacksonville, FL inspired color palette
 \item \strong{florida}, Florida inspired color palette
 \item \strong{washington}, Washington Redistricting Commission inspired color palette
+\item \strong{alaska}, Alaska inspired color palette
 }
 }
 \details{
@@ -53,6 +54,7 @@ plot(ggredist$wiki_proposal)
 plot(ggredist$jacksonville)
 plot(ggredist$florida)
 plot(ggredist$washington)
+plot(ggredist$alaska)
 
 }
 \concept{colors}

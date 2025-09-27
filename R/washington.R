@@ -18,7 +18,7 @@
 #' @export
 scale_fill_washington <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'washington',
-                          palette = rot_pal(ggredist$washington), ...)
+                          palette = palette::palette_function(ggredist$washington), ...)
 }
 
 #' @rdname scale_washington
@@ -26,7 +26,7 @@ scale_fill_washington <- function(...) {
 #' @export
 scale_color_washington <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'washington',
-                          palette = rot_pal(ggredist$washington), ...)
+                          palette = palette::palette_function(ggredist$washington), ...)
 }
 #' @rdname scale_washington
 #' @concept colors

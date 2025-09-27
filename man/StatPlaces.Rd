@@ -32,7 +32,7 @@ stat_places(
 )
 }
 \arguments{
-\item{mapping}{Set of aesthetic mappings created by \code{\link[=aes]{aes()}}}
+\item{mapping}{Set of aesthetic mappings created by \code{\link[ggplot2:aes]{ggplot2::aes()}}}
 
 \item{data}{The data to be displayed in this layer}
 

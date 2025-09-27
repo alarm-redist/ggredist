@@ -8,7 +8,7 @@
 [![R-CMD-check](https://github.com/alarm-redist/ggredist/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/alarm-redist/ggredist/actions/workflows/R-CMD-check.yaml)
 [![](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![r-universe status
-badge](https://alarm-redist.r-universe.dev/badges/ggredist)](https://alarm-redist.r-universe.dev/ui#package:ggredist)
+badge](https://alarm-redist.r-universe.dev/badges/ggredist)](https://alarm-redist.r-universe.dev/ggredist)
 <!-- badges: end -->
 
 `ggredist` provides `ggplot2` extensions for political mapmaking,

@@ -23,7 +23,7 @@
 #' @export
 scale_fill_coast <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'coast',
-                          palette = rot_pal(ggredist$coast), ...)
+                          palette = palette::palette_function(ggredist$coast), ...)
 }
 
 #' @rdname scale_nature
@@ -31,7 +31,7 @@ scale_fill_coast <- function(...) {
 #' @export
 scale_color_coast <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'coast',
-                          palette = rot_pal(ggredist$coast), ...)
+                          palette = palette::palette_function(ggredist$coast), ...)
 }
 #' @rdname scale_nature
 #' @concept colors
@@ -43,7 +43,7 @@ scale_colour_coast = scale_color_coast
 #' @export
 scale_fill_larch <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'fill', scale_name = 'larch',
-                          palette = rot_pal(ggredist$larch), ...)
+                          palette = palette::palette_function(ggredist$larch), ...)
 }
 
 #' @rdname scale_nature
@@ -51,7 +51,7 @@ scale_fill_larch <- function(...) {
 #' @export
 scale_color_larch <- function(...) {
   ggplot2::discrete_scale(aesthetics = 'color', scale_name = 'larch',
-                          palette = rot_pal(ggredist$larch), ...)
+                          palette = palette::palette_function(ggredist$larch), ...)
 }
 #' @rdname scale_nature
 #' @concept colors
