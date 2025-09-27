@@ -21,11 +21,11 @@
 #'
 #' ggplot(oregon, aes(group = cd_2020)) +
 #'   geom_district() +
-#"   stat_places(state = 'OR') +
+#'   stat_places(state = 'OR') +
 #'   theme_map()
 #' ggplot(oregon, aes(group = cd_2020)) +
 #'   geom_district() +
-#"   geom_places(state = 'OR') +
+#'   geom_places(state = 'OR') +
 #'   theme_map()
 #'
 #' @concept geoms
