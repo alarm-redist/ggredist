@@ -17,15 +17,17 @@
 #' @concept colors
 #' @export
 scale_fill_538 <- function(...) {
-  ggplot2::binned_scale('fill', '538',
+  breaks <- c(0, 0.35, 0.45, 0.55, 0.65, 1)
+  limits <- c(0.25, 0.75)
+  ivals <-  scales::rescale(breaks, from = limits)
+  ggplot2::binned_scale('fill',
                         palette = function(x) {
-                            if (length(x) > 5) {
-                                stop("`scale_fill_538()` supports up to 5 bins")
-                            }
-                            ggredist$fivethirtyeight[seq_along(x)]
+                          ggredist$fivethirtyeight[
+                            findInterval(x, ivals, all.inside = TRUE, rightmost.closed = TRUE)
+                          ]
                         },
-                        breaks = c(0.35, 0.45, 0.55, 0.65),
-                        limits = c(.25, .75),
+                        breaks = breaks,
+                        limits = limits,
                         oob = scales::squish,
                         guide = 'colourbar',
                         ...

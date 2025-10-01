@@ -16,7 +16,7 @@ stat_cities(
   position = "identity",
   na.rm = FALSE,
   adjust = 1,
-  min_pop = 100000,
+  min_pop = 1e+05,
   show.legend = NA,
   inherit.aes = TRUE,
   ...
