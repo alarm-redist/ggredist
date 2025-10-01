@@ -1,3 +1,7 @@
+# ggredist 0.0.4
+
+* Corrects failures in `scale_fill_538()` and `scale_color_538()` due to changes in ggplot2 4.0.0.
+
 # ggredist 0.0.3
 
 * Adds new discrete color palettes from Washingtonian and Alaskan redistricting proceses.
