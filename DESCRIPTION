@@ -1,6 +1,6 @@
 Package: ggredist
 Title: Scales, Geometries, and Extensions of 'ggplot2' for Election Mapping
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
     person("Cory", "McCartan", email = "mccartan@psu.edu", role = "aut"),
     person("Christopher T.", "Kenny", email = "ctkenny@proton.me",
